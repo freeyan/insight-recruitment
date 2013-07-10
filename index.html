@@ -1,0 +1,2619 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>因赛集团--广告人的中国梦</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi" />
+    <meta name="keywords" content="因赛集团--广告人的中国梦" />
+    <meta name="description" content="因赛集团--广告人的中国梦" />
+
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/detail.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]>
+		<link type="text/css" rel="stylesheet" href="/Content/all/css/ie6.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+        <link type="text/css" rel="stylesheet" href="/Content/all/css/ie7.css" />
+    <![endif]-->
+    <!--[if IE 8]>
+        <link type="text/css" rel="stylesheet" href="/Content/all/css/ie8.css" />
+    <![endif]-->
+    <!--[if gte IE 9]>
+      <link type="text/css" rel="stylesheet" href="/Content/all/css/ie9.css" />
+    <![endif]-->
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        var loopImg = null;
+        var currentInterval;
+
+        //$(window).resize(function () {
+        //    $("#divNotice").text($(window).width() + "*" + $(window).height() + "--" + $(document).width() + "*" + $(document).height());
+        //});
+
+
+        //function getMyDate() {
+        //    var myDate = new Date();
+        //    var str = myDate.toLocaleDateString();
+        //    var Week = ['日', '一', '二', '三', '四', '五', '六'];
+        //    str += ' 星期' + Week[myDate.getDay()];
+        //    return str;
+        //}
+
+        function setOpenwindowPosition() {
+            var right = 0;
+            var top = $(window).scrollTop();
+            var windowWidth = $(window).width();
+            var windowHeight = $(window).height();
+            if (windowWidth > 980) {
+                right = (windowWidth - 980) / 2;
+            }
+
+            if (windowHeight > 691) {
+                top = $(window).scrollTop() + ((windowHeight - 691) / 2);
+            }
+
+            $("#divFilter_openwindow").animate({
+                right: right,
+                top: top
+            }, 500);
+
+        }
+
+        function showOpenwindow() {
+            setOpenwindowPosition();
+
+            $("#divFilter").show();
+            $("#divFilter_openwindow").show();
+            $("#divFilter_openwindow_content").scrollTop(0);
+        }
+
+
+        function showZhuanfang() {
+            $("#divFilter_openwindow_content").html($("#divZhuanfang").html());
+            showOpenwindow();
+        }
+
+        function showPeople(id) {
+            $("#divFilter_openwindow_content").html($("#" + id).html());
+            showOpenwindow();
+        }
+
+        function showJob(id) {
+            $("#divFilter_openwindow_content").html($("#" + id).html());
+            showOpenwindow();
+        }
+
+
+        function loopShowZhuanfang() {
+            if (null != loopImg) {
+                var showImg = null;
+                loopImg.each(function (index) {
+                    if ($(this).attr("show") == 1) {
+                        showImg = $(this);
+                    }
+                });
+
+                if (null != showImg) {
+                    var showImg_id = showImg.attr("id");
+                    switch (showImg_id) {
+                        case "imgKV1_1":
+                            showImg.attr("show", "0").fadeOut(500, function () {
+                                $("#imgKV1_2").fadeIn(500).attr("show", "1");
+                            });
+                            break;
+
+                        case "imgKV1_2":
+                            showImg.attr("show", "0").fadeOut(500, function () {
+                                $("#imgKV1_3").fadeIn(500).attr("show", "1");
+                            });
+                            break;
+
+                        case "imgKV1_3":
+                            showImg.attr("show", "0").fadeOut(500, function () {
+                                $("#imgKV1_4").fadeIn(500).attr("show", "1");
+                            });
+                            break;
+
+                        case "imgKV1_4":
+                            showImg.attr("show", "0").fadeOut(500, function () {
+                                $("#imgKV1_5").fadeIn(500).attr("show", "1");
+                            });
+                            break;
+
+                        case "imgKV1_5":
+                            showImg.attr("show", "0").fadeOut(500, function () {
+                                $("#imgKV1_1").fadeIn(500).attr("show", "1");
+                            });
+                            break;
+                    }
+
+
+                }
+
+
+            }
+        }
+
+
+        $(document).ready(function () {
+            //$("#divNotice").text($(window).width() + "*" + $(window).height() + "--" + $(document).width() + "*" + $(document).height());
+            //$("#divMain_date").html(getMyDate());
+            $("#divFilter_openwindow_aClose").click(function () {
+                $("#divFilter").hide();
+                $("#divFilter_openwindow").hide();
+            });
+
+
+            loopImg = $("#divMain_l_kv1 img");
+            currentInterval = window.setInterval("loopShowZhuanfang()", 5000);
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div id="divBody">
+        <div id="divNotice">
+        </div>
+        <div id="divHeader">
+            <div id="divHeader_slogan">
+                <label>广告人</label>
+                还有梦想吗？在举国热议“中国梦”的时候，作为中国广告人，你是否也有一个“中国梦”？
+                    <a id="divHeader_slogan_other" href="http://www.madisonboom.com/" target="_blank"></a>
+            </div>
+            <!-- <div id="divHeader_menu">
+                <ul>
+                    <li>
+                        <img src="image/line.png" /></li>
+                    <li class="lia"><a href="#divMain_l_kv1">广告人的中国梦（专访）</a></li>
+                    <li>
+                        <img src="image/line.png" /></li>
+                    <li class="lia"><a href="#divMain_l_onload">梦想在路上</a></li>
+                    <li>
+                        <img src="image/line.png" /></li>
+                    <li class="lia lia3"><a href="#divMain_r_t">梦想集结号</a></li>
+                    <li>
+                        <img src="image/line.png" /></li>
+                </ul>
+            </div>-->
+        </div>
+        <div id="divMain">
+            <!-- <div id="divMain_date"></div>-->
+            <div id="divMain_l">
+                <div id="divMain_l_kv1">
+                    <img id="imgKV1_1" show="1" src="image/kv1_1.jpg" onclick="showZhuanfang()" />
+                    <img id="imgKV1_2" style="display: none;" src="image/kv1_2.jpg" onclick="showPeople('divPeopleDetail_1')" />
+                    <img id="imgKV1_3" style="display: none;" src="image/kv1_3.jpg" onclick="showPeople('divPeopleDetail_2')" />
+                    <img id="imgKV1_4" style="display: none;" src="image/kv1_4.jpg" onclick="showPeople('divPeopleDetail_3')" />
+                    <img id="imgKV1_5" style="display: none;" src="image/kv1_5.jpg" onclick="showPeople('divPeopleDetail_5')" />
+                </div>
+                <div id="divMain_l_kv2">
+                    <img src="image/kv2.jpg" />
+                </div>
+                <div id="divMain_l_onload">
+                    <h2 id="divMain_l_onload_t">梦想在路上————行业人士专访</h2>
+                    <div id="divMain_l_onload_c">
+                        <ul>
+                            <li>
+                                <img src="image/people00.jpg" />
+                                <h3 onclick="showZhuanfang()">王建朝 James Wang</h3>
+                                <h4>（因赛集团董事长 旭日因赛广告公司总裁）</h4>
+                                <!--  <label>2013年2月28日</label>-->
+                                <span>梦，是2012的年度汉字，也是2013开年之初最让国人热议...<a href="javascript:showZhuanfang()">[详细]</a></span>
+                            </li>
+                            <li>
+                                <img src="image/people01.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_1')">伦洁莹 Kitty Lun</h3>
+                                <h4>睿狮中国董事长/首席执行官</h4>
+                                <!--  <label>2013年2月28日</label>-->
+                                <span>广告是我的一生最爱，我在这个行业30多年了，在中国也13年...<a href="javascript:showPeople('divPeopleDetail_1')">[详细]</a></span>
+                            </li>
+                            <li>
+                                <img src="image/people02.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_2')">林俊明 Jimmy Lam</h3>
+                                <h4>DDB北中国区(北京及上海)副主席兼首席创意官</h4>
+                                <!--  <label>2013年2月28日</label>-->
+                                <span>有些梦想已经实现了，譬如说做一个出名的创意总监，笑...<a href="javascript:showPeople('divPeopleDetail_2')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people03.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_3')">李巍 Eric Lee</h3>
+                                <h4>智威汤逊上海董事总经理</h4>
+                                <!--    <label>2013年2月25日</label>-->
+                                <span>梦想存在的意义，就是它的高远和难以实现。而且梦想其实是... <a href="javascript:showPeople('divPeopleDetail_3')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people04.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_4')">杨烨炘 Forest Young</h3>
+                                <h4>上海盛世长城创意群总监</h4>
+                                <!-- <label>2013年2月26日</label>-->
+                                <span>我一好色，二好名，三好财，人类所有的弱点都在我身上发扬...<a href="javascript:showPeople('divPeopleDetail_4')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people05.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_5')">刘月梅 Shel Liu</h3>
+                                <h4>Being TBWA\上海 总经理</h4>
+                                <!--<label>2013年2月28日</label>-->
+                                <span>激情。就像婚姻中一直要保持恋爱的感觉一样，一定要有激情... <a href="javascript:showPeople('divPeopleDetail_5')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people06.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_6')">刘颖昭 Cobe</h3>
+                                <h4>旭日因赛合伙人 事业群总经理</h4>
+                                <!--   <label>2013年3月22日</label>-->
+                                <span>通过我们才华的展现，让更多的外资企业选择我们公司...<a href="javascript:showPeople('divPeopleDetail_6')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people07.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_7')">朱晓霆 Perth</h3>
+                                <h4>旭日因赛合伙人 创意群总监</h4>
+                                <!-- <label>2013年3月28日</label>-->
+                                <span>如果这也算一场战争，就现在来看，本土广告人打得还不错...<a href="javascript:showPeople('divPeopleDetail_7')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people08.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_8')">陈九南</h3>
+                                <h4>旭日因赛合伙人 西安分公司总经理</h4>
+                                <!--  <label>2013年3月5日</label>-->
+                                <span>对我而言，没有成功，只有成长；没有终点，只有接近... <a href="javascript:showPeople('divPeopleDetail_8')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people09.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_9')">任妙玲 Fanny Yum</h3>
+                                <h4>睿狮中国全国董事总经理</h4>
+                                <!--  <label>2013年2月28日</label>-->
+                                <span>放弃是最简单和容易的解决方法，但也是代表你认输了... <a href="javascript:showPeople('divPeopleDetail_9')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people10.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_10')">李实衍 Shih-Yen Lee</h3>
+                                <h4>DDB上海执行创意总监</h4>
+                                <!-- <label>2013年2月28日</label>-->
+                                <span>梦想就如同一颗胡萝卜，永远距离我的嘴巴三寸之远...<a href="javascript:showPeople('divPeopleDetail_10')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people11.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_11')">徐章烨 Danny Xu</h3>
+                                <h4>浩腾媒体(OMD) 广州董事总经理</h4>
+                                <!-- <label>2013年2月28日</label>-->
+                                <span>信念让我走到了现在，因为我相信天生我才必为广告... <a href="javascript:showPeople('divPeopleDetail_11')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people12.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_12')">束非 Gordon Shu</h3>
+                                <h4>TBWA\上海创意群总监</h4>
+                                <!--   <label>2013年2月25日</label>-->
+                                <span>我已经让兴趣成为了我的终生职业，我的梦想已经实现了。而...<a href="javascript:showPeople('divPeopleDetail_12')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people13.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_13')">吴兆华 Jamo Woo</h3>
+                                <h4>网迈广告全国策略总监</h4>
+                                <!-- <label>2013年2月28日</label>-->
+                                <span>三十岁之前就把梦想给实现了那人生多无趣啊，哈哈哈...  <a href="javascript:showPeople('divPeopleDetail_13')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people14.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_14')">陈海 Tony Chan</h3>
+                                <h4>广州市橙盟（数字营销）董事总经理</h4>
+                                <!-- <label>2013年3月5日</label>-->
+                                <span>面对不一样的挑战、体验不一样的经历是我最初的梦想... <a href="javascript:showPeople('divPeopleDetail_14')">[详细]</a></span>
+
+                            </li>
+                            <li>
+                                <img src="image/people15.jpg" />
+                                <h3 onclick="showPeople('divPeopleDetail_15')">吴宏山 Sam</h3>
+                                <h4>旭日因赛合伙人 事业群总经理</h4>
+                                <!-- <label>2013年3月26日</label>-->
+                                <span>我离梦想还有一站路，我还在路上，要实现梦想，需要更多的...<a href="javascript:showPeople('divPeopleDetail_15')">[详细]</a></span>
+
+                            </li>
+                            <!--    <li id="liBlank"></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="divMain_r">
+                <div id="divMain_r_t"></div>
+                <h3>经理管理及客户服务</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_1')">事业群总经理(职位编号No.001～005)5名</a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_2')">客户总监(职位编号No.006～010)5名</a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_3')">客户经理(职位编号No.011～018)8名</a></li>
+                </ul>
+                <h3>策划</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_4')">策略合伙人(职位编号No.019~～020)2名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_5')">策略总监(职位编号No.021～027)7名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_6')">策划经理(职位编号No.028～029)2名 </a></li>
+                </ul>
+                <h3>创作</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_7')">创意群总监(职位编号No.030～035)6名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_8')">创意总监(职位编号No.036～041)6名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_9')">创作组长(职位编号No.042～043)2名  </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_10')">美术指导(职位编号No.044～049)6名  </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_11')">资深文案(职位编号No.050～055)6名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_12')">插画师(职位编号No.056～057)2名   </a></li>
+                </ul>
+                <h3>媒介</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_13')">媒介事业群总经理(职位编号No.058～059)2名</a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_14')">媒介购买总监(职位编号No.060～061)2名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_15')">媒介资源开发总监(职位编号No.062)1名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_16')">媒介策划经理(职位编号No.063～064)2名 </a></li>
+                </ul>
+                <h3>数字营销</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_17')">项目总监(职位编号No.065～066)2名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_18')">客户经理 (职位编号No.067～068)2名    </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_19')">策划经理(职位编号No.069) 1名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_20')">资深Flash设计师(职位编号No.070～071)2名  </a></li>
+                </ul>
+                <h3>设计</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_21')">平面设计总监(职位编号No.072～073)2名  </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_22')">高级平面设计师(职位编号No.074～075)2名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_23')">商业空间设计师(职位编号No.076～077)2名 </a></li>
+                </ul>
+                <h3>集团研发及培训中心</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_24')">研发培训总经理(职位编号No.078)1名  </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_25')">高级品牌顾问(职位编号No.079)1名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_26')">策略开发总监(职位编号No.080)1名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_27')">高级创意顾问(职位编号No.081～082)2名    </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_28')">市场研究员(职位编号No.083)1名   </a></li>
+                </ul>
+                <h3>管理服务</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_29')">董事会秘书(职位编号No.084)1名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_30')">集团财务总监(职位编号No.085)1名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_31')">财务经理(职位编号No.086～087)2名    </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_32')">信息经理(职位编号No.088)1名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_33')" title="数码影视后期制作中心运营总监(职位编号No. 089～090) 2名">数码影视后期制作中心运营总监2名    </a></li>
+                </ul>
+                <h3 title="第八届新太阳计划(2013～2014年应届毕业生)">第八届新太阳计划(应届毕业生)</h3>
+                <ul>
+                    <li><a href="javascript:showPeople('divJobDetail_34')">助理策划(职位编号No.091～092)2名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_35')">助理文案(职位编号No.093～094)2名 </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_36')">助理设计师(职位编号No.095～096)2名     </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_37')">助理客户主任 (职位编号No.097～099)3名   </a></li>
+                    <li><a href="javascript:showPeople('divJobDetail_38')">助理创意研究员(职位编号No.100)1名     </a></li>
+                </ul>
+                <div id="divMain_r_b"></div>
+            </div>
+        </div>
+        <div id="divFoot">
+           <!-- <div id="divFoot_right">旭日因赛广告有限公司版权所有   橙盟（数字营销）制作</div>-->
+        </div>
+        <div id="divFilter">
+        </div>
+        <div id="divFilter_openwindow">
+            <a id="divFilter_openwindow_aClose" href="javascript:void(0)"></a>
+            <div id="divFilter_openwindow_content">
+            </div>
+        </div>
+
+    </div>
+    <div class="hide">
+        <!-- 这里是王总专访的详细 -->
+        <div id="divZhuanfang">
+            <div class="detailInfo divZhuanfang">
+                <div class="detailInfo_t divZhuanfang_t">因赛（集团）董事长 旭日因赛广告公司总裁 王建朝专访：广告人的“中国梦”</div>
+                <img src="image/wangzong.jpg" />
+                <p>梦，是2012的年度汉字，也是2013开年之初最让国人热议和激动的汉字。<br />
+                    这个“梦”，是中国梦，是实现中华民族的伟大复兴，是新任国家领导人在就职演讲中再次向全国人民所阐述的伟大目标。<br />
+                    中华民族的伟大复兴之路由各行各业汇聚而成，一个行业的发展梦想唯有与整个民族和时代的梦想相一致，才能成就一个行业的尊严与辉煌。<br />
+                    作为一个中国的广告人，你是否也有一个广告业的“中国梦”？梦想着有朝一日与中国的民族品牌一起走向世界？梦想着以自己的智慧和创意在世界上赢得荣耀与尊敬？梦想着在专业实力和规模效应上可以与国际性的大型营销传播服务集团同台竞技？<br />
+                    也许，这就是中国广告业和广告人的中国梦！近日，因赛（集团）董事长兼旭日因赛广告公司总裁王建朝接受专访，以其20年的广告从业经历，畅谈他作为一个中国广告人的中国梦。</p>
+
+                <h3>一．关于行业的发展机遇</h3>
+                <p>
+                    <strong>“在专业实力和规模效应上达到世界先进水平，与国际性的大型广告传播集团同台竞技，助力中国品牌走出中国、走向世界，是中国广告服务业的中国梦。”<br />
+                        “中国广告服务业正在迎来一次实现‘中国梦’的绝佳发展机遇。”</strong></p>
+                <p>
+                    <strong>记：</strong>从去年年底习近平总书记提出“中国梦”到在今年新一届的全国人大闭幕式上再次完整阐述“中国梦”，引起了国人的广泛关注和共鸣。您作为一个资深的广告人带领旭日因赛走到今天，一定有一个远大的梦想在推动您不断进行，您认为中国广告服务业的“中国梦”是什么？</p>
+                <p>
+                    <strong>王：</strong>这个问题值得整个行业思考，实现中华民族的伟大复兴是中国人的中国梦，广告服务业和广告人也当然包括其中。&nbsp;在专业实力和规模效应上达到国际先进水平，与世界领先的国际大型广告传播集团同台竞技，&nbsp;以自己的智慧和创意在世界上赢得荣耀与尊敬，&nbsp;助力中国企业不仅在中国市场建立领导品牌，而且以自己的品牌走出中国、走向世界，是我认为中国广告服务业和广告人应该实现的“中国梦”。</p>
+                <p>
+                    <strong>记：</strong>梦想照进现实需要条件，中国广告服务业现在面临一个什么样的发展环境和发展机遇，为实现广告人的“中国梦”提供了什么样的现实条件？</p>
+                <p>
+                    <strong>王：</strong>我认为中国广告服务业的生存和发展环境正在面临巨大的改变，行业自身也正面临转型升级的压力和挑战，&nbsp;而这恰恰为广告人实现中国梦提供了绝佳的发展机遇和条件。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先，是广告服务业的行业价值和社会意义正在从帮助“推销商品和传递信息”转向“真正帮助传播和建立品牌”，同时具备特定的文化创意价值，这就是在中国经济从“制造”向“创造”转型升级的过程中广告服务业所必须扮演的重要角色。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其次，是中国的行业和市场也正在发生转变和转型。当中国经济发展动力从依赖外向型向内需驱动型转变，当中国消费者的收入和消费能力得到普遍而大幅度的提升，基于中国市场的巨大体量和增长潜力，中国的很多行业（特别是消费品领域）一定会发生基于规模效应的行业大整合，最后形成一批行业龙头企业。&nbsp;而由于中国市场是全球最大的单一市场，&nbsp;在中国市场上的行业龙头一定也有机会成为全世界的行业巨头，而这样的行业巨头最终必定会以自己的品牌走出中国，走向世界。毫无疑问，帮助中国企业建立这样的行业和市场领导品牌，对中国的广告服务业是一个巨大的战略需求和机遇，对于有梦想的中国广告人是一项光荣而又神圣的使命，也是广告人实现中国梦的最大推动力。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;再次，我们看到中国政府对广告服务业的认识和政策也在发生很大的改变。以前政府把广告业看成是一个需要监管的行业，&nbsp;但今天政府很明显地意识到广告业在中国经济和文化发展上的战略价值&nbsp;—&nbsp;在经济上推动从“制造”向“创造”转型，帮助建立中国的民族品牌;&nbsp;在文化上影响和引导人们的消费行为和价值观;&nbsp;在行业上与传播媒体紧密依存（大部分传播媒体的主要收入来源于广告）。而另一方面，中国的广告传播服务市场有被国际性的大型广告传播集团所控制和垄断的趋势。目前外资在中国广告传播服务市场大概拥有35%的市场份额，虽然国内广告传播服务企业数量庞大（几十万家），但由于在专业实力和规模上都比较弱小和分散，导致外资在中国广告传播服务市场的控制力越来越大。&nbsp;正是基于这种原因，近两年从中央到省级地方政府主管部门出台了一系列扶持广告服务业发展的政策和举措，&nbsp;国家工商行政管理局制定了中国广告服务业的整体发展战略，目标是到2020年把我国广告服务业建设成为在广告策划、创意、设计、制作、发布、管理水平上达到或接近国际先进水平的行业。&nbsp;其中关键一环就是扶持打造一批具有全球服务能力的大型综合广告传播服务集团，&nbsp;积极参与广告服务业的国际竞争。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最后，国内的广告服务行业也正在发生以“整合与集中”为特征的转型升级。在过去这几年，&nbsp;国内的广告传播服务行业发生了很明显的专业度提升和行业集中度提升的进程。&nbsp;以广州的广告服务业为例，1997年时由30多家综合性广告公司一起成立中国第一个4A广告行业协会，&nbsp;其中有一大半的公司到今天已经消失了，这意味着广州的综合性广告公司正在走向集中，也意味着可以避免行业资源的过度分散和浪费，&nbsp;无论是人才的资源还是客户的资源。目前在华南地区专业人才达到300人以上规模的广告公司只有两家，其中一家是旭日因赛；专业人才在100人左右的广告公司，也只有几家；再往下就全部是几十人的公司，规模级别已经在明显拉开。&nbsp;与北京和上海不同的是，在广州和华南地区的外资广告公司的规模和实力也并不突出，普遍都是几十人到一百多人左右的规模。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;造成这些变化的根本原因还是在于客户需求的转变和行业生态环境的变化，只有真正从专业能力和经营模式上适应并引领这种变化的公司才能成为优胜劣汰和行业集中的胜出者，&nbsp;而这一过程恰恰又是广告传播服务业升级转型的必由之路和必然结果。</p>
+                <p><strong>记：</strong>您认为是客户要求的转变和广告服务业生态环境的改变导致了广告公司的优胜劣汰和行业集中度的提升，&nbsp;那么这种需求与行业生态环境的改变具体表现在那些方面？对广告公司又意味着什么？</p>
+                <p>
+                    <strong>王：</strong>改变主要体现在以下三个方面：<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一是传播方式的变革：从“单向信息传播模式”到“双向参与沟通模式”<br />
+                    过去我们比较习惯性用的营销传播方式是“大众传播模式”，是运用大众传播媒体单向地向受众传递商业信息。今天由于传播媒体的巨大变化，特别是新媒体的影响越来越大，消费者和受众不再是被动地接受媒体传递的信息，而是自己可以利用媒体主动参与，互动交流，甚至是创造和扩散自己的影响力。因此，今天和未来的传播方式必须转向更加双向和互动参与式的沟通模式，也就是必须能够吸引受众的主动参与，互动交流，更多体验和更多扩散。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二是传播手段的改变：从单一传播手段到多元传播手段的整合任用<br />
+                    今天和未来的营销传播要做到有效，就必须整合运用不同的传播手段，同时还要考虑传播手段和传播媒体的结合，这是一种更复杂更高难度的传播技能。广告公司要满足这种要求，不仅需要具备很强的策略和创意能力，而且还需要具备整合运用不同传播手段和传播媒体的能力与资源，包括品牌战略规划、整合传播策划、广告策划与创意、媒体策划与执行、公关传播、网络互动营销传播、平面与空间视觉设计、终端形象与促销管理等。&nbsp;这意味着广告公司能力和资源的多元化，也意味着广告公司业务和生意的多元化。&nbsp;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三是与客户之间合作关系的改变：从传播代理服务到战略合作伙伴<br />
+                    过去广告公司与客户之间的合作关系是一种代理服务关系，今天由于客户需求的提升，&nbsp;客户评估合作价值的依据越来越看重合作伙伴在品牌成长和生意增长上的推动作用。因此从这个角度来看，广告公司与客户之间的合作关系已经不再是简单的代理服务关系，而是一种深层次的战略伙伴关系，这要求广告公司必须要站在客户生意的角度了解客户的要求，提供自己的解决方案和服务价值，并且最终以对客户生意的推动作用来衡量和评价自己的工作成果和服务价值。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;适应上述三个方面的改变，就是广告服务业升级转型的大方向和必经之路。能够适应这些改变、并且走在这些改变前面的公司必然会做大做强，最后成为行业的整合者和领导者。不能适应这些改变的公司必然会越做越小、越做越难，最终被迫转行或遭淘汰。</p>
+
+                <h3>二．关于行业的升级转型</h3>
+                <p><strong>“未来广告公司与客户之间的合作，可能不只是收取服务费，还可能按照品牌成长的业绩目标进行业绩分红和奖励。”</strong></p>
+                <p>
+                    <strong>记：</strong>要适应这些改变，您认为未来的广告公司应该如何转型升级？</p>
+                <p>
+                    <strong>王：</strong>以品牌建设为核心，整合全方位的品牌规划管理和营销传播的价值链，从最前端的品牌战略咨询，到营销传播的整体策略规划，再到各个层面的创意和执行，甚至可以延展到媒体的创新、媒体资源的整合，在价值链上可以做上下游的垂直整合和传播技能的纵向整合。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未来广告公司与客户之间的合作，可能不只是收取服务费和代理佣金，还可能按照品牌成长达成的业绩目标进行分享和奖励。&nbsp;广告公司还可以对成长中的客户以品牌服务进行投资，从而可以更长期地分享客户成长的收益和回报。</p>
+
+                <h3>三．关于旭日因赛的中国梦</h3>
+                <p>
+                    <strong>“我们的梦想是建立一个在专业实力和规模效应上达到国际先进水平，&nbsp;广受客户和同行尊敬的广告传播服务平台，&nbsp;有机会和有能力帮助中国的企业不仅在中国市场建立领导品牌，&nbsp;而且陪伴他们以自己的品牌走出中国，走向世界。”</strong></p>
+                <p>
+                    <strong>记：</strong>面对中国广告服务业的发展机遇，旭日因赛的发展目标或梦想是什么？</p>
+                <p>
+                    <strong>王：</strong>我们的梦想是建立一个在专业实力和规模效应上达到国际先进水平，广受客户和同行尊敬的广告传播服务平台，有机会和有能力帮助中国的企业不仅在中国市场建立领导品牌，而且陪伴他们以自己的品牌走出中国，走向世界。作为一个广告人，我们最想要的行业地位是：被客户尊重、被行业敬重、被国家倚重以及被世界认可，做中国最好的广告公司。</p>
+                <p>
+                    <strong>记：</strong>旭日因赛在业内一向比较低调，没想到有这么高远的梦想和发展目标。这个梦想是怎么形成的？你们是如何一步一步去做的？</p>
+                <p>
+                    <strong>王：</strong>从我们公司的发展历程看，1994年到2002年是第一阶段，这个阶段是纯粹的本土广告公司。2002年到2012年是第二个阶段，这个阶段我们主要做两件事情，一件是在专业和服务上累积我们的能力和优势，一件是积累了一大批长期合作的优质客户。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在第二阶段的十年中，&nbsp;在专业上我们探索如何把国际化的专业优势与对中国本土市场的理解和洞察相结合。&nbsp;这种专业上的优势从2009年就开始凸显出来，这一年我们拿到了戛纳国际广告节的银狮和铜狮奖，实现了中国本地广告公司在戛纳获奖零的突破，此后我们还获得伦敦国际广告节的银奖、纽约国际广告节的铜奖、亚太广告节的铜奖、龙玺奖、中国4A协会的金印奖、中国国际广告长城奖的全场大奖和一大批金银铜奖等。&nbsp;从2010年开始，我们在行业权威的大中华地区广告公司专业实力排名中位居前十位。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同时，我们在服务上也一直尝试把国际化的领先专业品质与本地化的服务优势相结合，这让我们积累了一大批有影响力的长期优质客户，例如：我们跟华为的合作现在快到第9个年头了，和招商银行的合作也有5年，TCL有6年，陆风汽车7年，合作最长的像西安的紫薇地产有10年。近几年更吸纳到像广汽丰田、海信、网易、腾讯、奇瑞汽车、浙江电信、广发银行等一批有战略价值的优秀客户的加入。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在，我们正从第二个阶段向第三个阶段转型，&nbsp;也就是成为在中国最受尊重、最具专业实力和规模优势的品牌管理与营销传播服务平台。&nbsp;这个转型不是一夜之间就能完成的，需要我们既充满激情、又脚踏实地去实现。</p>
+                <p>
+                    <strong>记：</strong>在这个新的阶段，旭日因赛已经具备和将要创造那些方向的领先优势？</p>
+                <p>
+                    <strong>王：</strong>第一是理念上的优势，这就是通常人们所说的“思路决定出路”。我们对于整个行业未来的大趋势早已看得比较透彻，因此也早就在专业、服务和经营理念上进行了深刻的思考与调整，形成了一套完整的理念与文化体系。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二是我们的专业能力优势，从策略到创意再到各种传播工具的执行，从专业体系到实际执行能力，我们都已经具备一定的专业优势，而且这种优势已经初步得到客户和行业的认可。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三是我们的资源优势，这种优势包括各种内部和外部的资源，比如在专业团队和资源上的优势，在客户资源上的优势，在供应商资源上的优势，在价值链整合上的优势，在政府支持上的优势等。关于政府的支持，基于我们在华南地区的专业实力和规模领先优势，&nbsp;很明显省市级政府主管部门把我们当作一个标杆企业来对待，从各个方面给我们提供必要的支持。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第四是我们在内部运营机制上的优势，&nbsp;这几年我们在内部运营机制上进行了深度的变革，主要体现在团队的整合以及与团队高管的利益伙伴关系上。团队的整合打破了4A广告公司的传统作业模式，将前后端主要的团队角色整合成紧密的事业单位，大家都一起面对客户的需求和目标，都用共同的结果来评估自己的工作和责任，把流程尽可能的简化，一切以客户价值和客户满意度为依归。同时我们的事业单位高管既是业务模块的经营管理者，对经营结果负责并享有业绩激励；同时他们又是整个公司的股东与伙伴，把公司的整体发展当成自己的事业一样珍惜和拥有。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第五是我们将来在资本运作上的优势，未来几年我们将充分任用各种可能的投融资方式与手段，整合资本的力量，为我们进行价值链的整合以及在全国区域中心城市的地域扩张提供充足的资本动力。</p>
+                <p><strong>“现在我们是华南地区的专业领跑者，未来5年，我们会把在华南区的专业优势发展到全国”</strong></p>
+                <p>
+                    <strong>记：</strong>具备这样的领先优势，旭日因赛在未来有什么样的一个发展计划？</p>
+                <p>
+                    <strong>王：</strong>我们的发展策略主要包括：1.业务的多元化发展；2.地域的扩张布局；3.保持专业上的领先；4.强化贴心服务；5.利用资本的力量。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在我们努力在华南地区做到最好，未来5年，我们会把在华南区的专业优势扩展到全国。目前我们已经有了西安分公司，未来还要在全国十个以上区域中心城市布局，真正形成一个全国性的网络，贴身服务我们的客户。当我们走出这些步伐后，我相信市场会提供更多的资源和机会给我们，也为我们的人才发展提供了更多更大的空间。我们希望从2019年至2022年公司重组20周年之前，有机会成为中国最具专业实力和规模优势的品牌管理和营销传播服务集团，能够陪伴我们的客户以自己的品牌走出中国，走向世界。</p>
+                <p><strong>“实现一个伟大的梦想不可能依靠一两个人，&nbsp;而是要团结和依靠一大群人，是一群人一起实现一个共同的梦想！&nbsp;旭日因赛的事业是属于一群有共同理想和追求的人，这群人在一起是事业的伙伴、生意的伙伴、梦想的伙伴。<br />
+                    “我们的核心管理层有20多人都被授予公司一定股份或期权。”</strong></p>
+                <p>
+                    <strong>记：</strong>广告服务业又称为“食脑业”，是一个人才密集的行业，据说旭日因赛的高管有些在公司工作已经超过10年以上，特别稳定，对手怎么都挖不走，为什么？</p>
+                <p>
+                    <strong>王：</strong>我想有几个因素：一是我们这个平台在华南地区是比较专业和受尊重的，再就是我们既严谨又包容的企业文化，大家彼此尊重、以诚相待。我们的核心管理层有20多人，包括各个事业群总经理、创意领导人以及各专业公司的总经理等，这些资深的人才都被授予公司一定的股份或期权。也就是说我们有一批核心的伙伴一起经营这个平台，而不是靠一两个人，这些高管不会把自己只当作是职业经理人，而是当作这个公司的拥有者之一。我们拥有很多共同的追求和目标，比如做最好的策略和创意、最好的品牌建设案例以及协助中国企业打造有影响力的品牌。&nbsp;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们相信：实现一个大的梦想不可能只依靠一两个人，而是要团结和依靠一大群人。&nbsp;旭日因赛的事业是属于一群有共同理想和追求的人，这群人在一起是事业的伙伴、生意的伙伴、梦想的伙伴。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我希望未来还会吸纳更多有梦想、有才华、有激情的中国广告人加入我们的伙伴行列，一起去实现“中国广告人的中国梦”。</p>
+
+                <h3>四．给有梦想的广告人几点建议</h3>
+                <p><strong>“我们做事情的终极意义和价值是什么？我觉得这个问题值得所有广告人思考。这个问题如果没想清楚，就很容易随波逐流。”</strong></p>
+                <p>
+                    <strong>记：</strong>不少广告人都是带着梦想进入这个行业的，但后来很多人发现梦想与现实是俩回事，继而丢掉了当初的激情与梦想。&nbsp;您在广告服务业20年，&nbsp;是否也有过这样的困惑？</p>
+                <p>
+                    <strong>王：</strong>其实，每个广告人都可能曾经有过这样的困惑。在现实中，你要在一家公司生存下来，需要业绩、作品，需要客户认同你的策略和创意，需要争取到新的客户等等。另一方面广告人都希望能做成功的大案例、大创意，得大奖，服务大客户，这是理想。理想和现实之间很少能统一，大部分时候大多数公司都会向现实妥协。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国广告人要实现梦想靠什么？我们需要找到一个什么样的舞台才能实现自己的梦想？我们希望得到什么样的尊重？得到什么样的回报？我们做的事情的终极意义和价值是什么？我觉得这些问题值得所有广告人思考，&nbsp;这些问题如果没想清楚，就很容易随波逐流。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如在一家公司做了一段时间，觉得碰到一些瓶颈，可公司又没有给自己看到下一个空间是什么，这个时候猎头来拉一拉，就去了另一家公司。跳槽几次，八年十年就过去了，而我认为35到45岁是一个广告人最黄金的时间，这段时间如果飘移不定的话，就很难有大的成就。</p>
+                <p>
+                    <strong>记</strong>：“广告人的中国梦”是您一直以来的执着追求，相信也是很多广告人的追求。您会对仍然奋斗在梦想追寻途中的中国广告人给予什么样的建议？</p>
+                <p>
+                    <strong>王：</strong>我相信国人的中国梦一定可以实现，广告人的中国梦也一定可以实现。对于奋斗在梦想追寻途中的中国广告人，我有几点建议与大家分享：<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一，要对中国的未来发展充满信心和希望，这个是大前提，一定要很乐观的看中国的未来；<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二，对中国的企业充满信心和期望，对中国未来能够成长出一批世界性的企业和品牌一定要保持想象力；<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三，对中国的文化有充分的自信，&nbsp;因为中国的品牌背后一定有中国的文化基因，要对中国的文化有研究、有感情、有自信；<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第四，在专业上要有一颗永远再吸收、再学习的心态，对这个世界上发生的事情永远抱有一颗好奇的心，要善于从别人的成功中去学习，而且要把生活跟工作很好的结合；<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第五，也是最重要的建议，选择一个适合自己的梦想舞台。对于年轻的广告人，比如从业五年以内的，&nbsp;应该加入一个有完善的专业体系和国际化视野的公司，才能够打下坚实的专业基础；对于中生代的广告人，比如从业五到八年的，选择面就可以宽一些，只要能够有足够的成长和发挥空间就可以；而对于从业七八年到十五年左右的资深广告人，则一定要慎重的考虑平台的选择，这个阶段正处于事业的鼎盛期，一旦选错平台，一生的梦想就很难实现。比如在一般的本土广告公司，由于资源和视野受限，很难让你大有作为；而在一些大型的外资公司，则很容易遇到上升的瓶颈，并且再继续做下去也仍然只是一个职业经理人；因此选择一家让你有归属感（不只是作为职业经理人），兼具国际化专业视野同时又能够让你为中国品牌的发展承担使命的大舞台就非常重要！</p>
+                <p><strong>“我深深地觉得中国广告人应该抱有使命感，&nbsp;努力帮助中国企业建立我们自己的品牌。我们如果不努力去做，这个重要的领域就可能会被外资所垄断。”</strong></p>
+                <p>
+                    <strong>记：</strong>梦想是高尚的，很多人认为谈梦想就不好谈利益，一谈这个好像一下子就俗了，梦想就坠入了尘埃，您怎么看这个问题？</p>
+                <p>
+                    <strong>王：</strong>梦想需要坚持、也需要平台才能实现，但不是非要以牺牲个人的利益和生活为代价。对广告人来说，理想的平台应该能让你很好地去平衡每天做的东西和心中所追求的东西。&nbsp;这个平台应该是有一定特征的，比如：有一定的规模、有一定的专业标准、有很好的运作机制、能够给人很好的发挥空间和公平的待遇、尊重人才、尊重创意、提供广阔的发展空间等等，这些都是一个理想平台的特征。<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我深深地觉得中国广告人，&nbsp;努力帮助中国企业建立自己的品牌。&nbsp;如果我们不努力去做，中国的广告服务业就会像过往在一些新兴的市场如香港、台湾、韩国一样被外资所完全控制和垄断。这不仅是中国广告人所不愿意看到的，更是中国的政府所不愿意看到的。</p>
+                <p>
+                    <strong>记：</strong>为什么您对实现“广告人的中国梦”充满自信？</p>
+                <p>
+                    <strong>王：</strong>中国文化有五千年的历史，源远流长，中华文明是世界四大文明之一，拥有超过世界五分之一人口的认同。品牌的建立一定需要融入消费者的文化认同，只有我们中国人才最懂中国的文化，&nbsp;也只有中国人最能够切身体会自己所处的时代和环境，真正洞察中国人的内心，也更能够理解中国的企业、认同他们的理想。中国企业完全有能力有智慧有机会培育出有世界影响力的品牌，中国人也完全有能力有智慧打造具有全球服务能力的大型综合广告传播集团，&nbsp;我们希望团聚更多有同样梦想的伙伴一起为实现这个梦想而努力。</p>
+                <p>附：王建朝简介：<br />
+                    因赛（集团）董事长、旭日因赛广告公司总裁<br />
+                    1985年毕业于中山大学获硕士学位，从业至今20年，曾就职于奥美广告公司（广州及上海）任调研与企划总监，获奥美亚太区企划学者奖(Scholar&nbsp;Award)。2001年1月创办因赛品牌顾问公司，为企业提供品牌战略和整合传播规划咨询顾问服务，随后主导将因赛品牌顾问公司与旭日广告公司进行合并重组，成立旭日因赛广告公司。&nbsp;2010年形成因赛整合营销传播集团，旗下包括旭日因赛广告公司（广州及西安）、以及多家涵盖公关传播及数字营销传播等专业传播技能在内的专业子公司。2007年主导发布“品牌摄众营销传播理论”，2011年受聘暨南大学新闻与传播学院兼职硕士生导师。</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="hide">
+        <!-- 这里是人物的详细 -->
+        <div id="divPeopleDetail_1">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>伦洁莹 Kitty Lun<br />
+                                睿狮中国董事长/首席执行官 </span></li>
+                        <!--   <li>
+                            <label>采访时间：</label><span>2013年2月28日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>当初只是想从事有关于创作的工作。基本上是一个一个目标的实现后，发现还可以往前、往上，而一路走，一路把梦想升级。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people01_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <p>从来没有耶。可能因为心头不高，所以一方面安于现有的步伐，另一方面，我也算是幸运的，有好的机遇、也有很多良师益友，想得到的都能靠一步一步的实现，所以也心无旁骛，而且我是特别专注的人。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>困难、挑战，天天都有，人在其中时会觉得特别难受，但时间时最有效的忘忧草，回头看以前的困难，在今天看来真的不算什么。我会说小困难很多很多，但没有一件是大到解决不了的。</p>
+                    <p>可能我是比较乐观，也可能是我的目标为本，我是奉行不会把目标定到高不可攀，我会时一步一步达成，众多的小目标成就大想法吧，不贪心就好。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>三个字“接地气”。</p>
+                    <p>LOWE 睿狮就近的工作也朝着方向走着，我们甚至是领导这个趋势的表表者， 例如： 支付宝的“郑棒棒”、“钥匙阿姨”，别克昂科拉的80后宣言“年轻就去SUV”， 央视春节公益广告”红包篇“，别克凯越：生活实在不凡的”凯越人生“。显示出中国生活、经济、态度的种种变化，与时俱进之余，在在也不忘我们中国人的底蕴和特质。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>接地气   以人为本   以心为依归</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>广告是我的一生最爱，我在这个行业30多年了，在中国也13年，台湾3年，不同的岗位也做过了，离开也回来过，奖也赢过无数，别人给的荣耀也不少，书也写过， 最近的十多年也做到广告公司的最高领导了，你说呢？</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_2">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>林俊明 Jimmy Lam<br />
+                                DDB北中国区(北京及上海)副主席兼首席创意官</span> </li>
+                        <!--   <li>
+                            <label>采访时间：</label><span>2013年2月28日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>我最早进入广告行业时，那时候香港的金牌文案纪文凤女士曾经在我身边讲过课，让我觉得，咦，做广告好像很好玩哎。那时她有一句很出名的广告语“维他奶,点只汽水咁简单！”，意思是说，维他奶，不只是汽水这么简单。影响力非常大。她可以说是我进入广告行业的启蒙老师。那时候我就觉得，能进广告行业，做一个出名的创意总监，像一个明星一样，当许多人心里的偶像，客户爱你，同事崇拜你，竞争者提到你就恨的牙痒，那该是多有成就感的事情啊。</p>
+
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people02_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>成功的太容易，就会让人自信过头。在广告公司拿着不错的收入，只能算不错啊其实并不是特别好，这种不上不下的状态最容易让人变得非常物质，会一个劲埋头想努力工作想办法赚更多钱。而广告公司的快节奏生活又会让人很容易忽略家庭，忽略和家人在一起生活的宝贵时间。但是我从来没想过要放弃，也没有想过要离开这个行业。我确实有一段离开了广告公司，但是那段时间我是自己在做一个纯粹的TVC的导演。因为我觉得那一块儿特别有意思。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>能够想出伟大的idea，能够辨别哪个是才是好的idea，能够看出来哪些年轻创意人是有潜力的，我知道我有这些能力。所以才能走到现在。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>中国广告人在全世界慢慢的越来越有名气，也越来越受尊敬。成功的创意广告方案会带你走向更高的平台，那时候你也能够比世界别的地方的人看得更远。</p>
+                    <p>但是，一个年轻的平凡的创意人想把自己的才华展现出来其实是很难的，最重要是要有机会，要有平台。不是每个创意人都那么有钱跑到国际参赛，或者运气那么好花了钱参了赛就能出来。这些都需要一个成熟的环境的熏陶。曾经有人发起过一个全球华文奖，我们都很支持，但是有一年这个奖项停办了，我们都感到太可惜，这样的奖不应该有一年是空缺的，就干脆自己来搞一个奖项好了，于是我们一群人就办了一个龙玺奖。这是华人中唯一由创意人发起的奖项，因为发起人是真的能够提高整个行业创意水平的一群人，他们很懂，比其他任何人都清楚一个创意奖到底应该是怎么回事，应该鼓励的是什么样的创意和人。我们希望这个小小的平台，能够推动越来越多的中国广告人走向国际舞台。而事实上，每一年我们都能看到许多很出色的创意，也能看到很多中国的年轻人很努力的不妥协的往前走，可以毫不犹豫的说，华文地区的广告创意在整体的提高，在慢慢的占据越来越大的国际舞台。
+                    </p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>不放棄  喜欢 幽默感</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>有些梦想已经实现了，譬如说做一个出名的创意总监，笑。但也有一些也许永远都实现不了。可是这是推动我一直向前的动力。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_3">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>李巍 Eric Lee
+                                                    <br />
+                                智威汤逊上海董事总经理</span> </li>
+                        <!--  <li>
+                            <label>采访时间：</label><span>2013年2月25日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>我当时想进入广告行业，主要是因为这个行业的灵活性，可以见到不同的人，了解到不同行业的资讯和信息，同时这个行业的高速运转，让我能够在短时间内学到很多的东西，这些都是促使我在当初选择进入广告业的原因。</p>
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people03_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <p>随着时间的推移和经验的积累，除了最初的爱好之外，我也有了想达到的目标和想做出的贡献。在很长一段时间里，我希望可以做出能够影响大家思想行为的Campaign。讲大些就是文化的象征，比如国外一些经典广告，有时广告的意义不仅是推动产品的销售，而是在一个伟大品牌的建设中贡献一份力量。在那段时间里，我希望能够参与甚至带领团队做出这样的campaign，可以影响整个市场以及文化。</p>
+                    <p>随着在行业内的成长，我的想法也开始有一些转变。除了想要帮客户做有影响力的Campaign之外，我也在想怎样建立和发展一个在业内外都受到尊敬的广告公司。同时也希望能够通过一系列的创新，带动整个广告业的发展。这更加是我目前的梦想。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>每个人都会面对很多压力，来自于时间分配或者责任等。要如何面对和解决，这对每个人而言都是挑战。在我看来，我们做每件事都需要人的配合，因为我们不是闭门造车，我们需要工作伙伴和客户的支持，在产生意见分歧的时候，感到沮丧的时候，与对方良好沟通，把大家的想法调整到一个频道上，才能达到更好的效果。</p>
+                    <p>诱惑并没有多少，因为我从进入广告行业以来，我觉得自己很适合这个行业也一直很喜欢我的工作，所以我能够坚持专心的做我的工作。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>每一次遭遇挑战和困境，我都会与自己对话，问问自己，为什么要做这些事情？为什么要这么辛苦的坚持？如果我确认我的目标的意义和价值，那么现在所有的付出都是值得的。我想支撑我战胜困难的，是目标带来的意义，自己对这个目标和意义的认同，还有内心深处对达到目标的渴望。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>我一直都很期待中国有一些本土的广告创意公司，可以作为创意的代表，在市场上有一个位置。在国外，有很多这样的例子，比如W&K，BBH, DROGA5等，他们最初都是在4A广告公司的环境里成长的，但后来他们想用自己的方法来做自己的事情，就成立了自己的广告公司，并获得了很好的成果。我们也希望中国的广告圈内能够有多些这样的Creative Hot Shop。</p>
+                    <p>现在我们看到很多本土的广告公司，是靠媒体买卖来赚钱的，这也影响到他们在创意方面的发展，我希望出现一些用创意来赢得市场地位的公司。而且我完全相信，中国人是有这个能力做到的。</p>
+                    <p>另外，我认为我们中国人也可以利用我们自己对广告方面的理念和经验，建立一套我们自己的工具来了解本土市场。我希望未来能够看到这方面的发展。</p>
+                    <p>我自己作为国际广告公司上海分公司的运营负责人，我也希望能够借助国际上的一些理念，更好的与中国本土的经验进行结合，达到更好的结果。这是我在这个岗位上可以做到的事情。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>认清目标，用创意的方法来解决问题，坚持不懈</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>梦想存在的意义，就是它的高远和难以实现。而且梦想其实是随着时间的推移在不断转变的。对我而言，我的梦想一直都在前方，带动我一直往前走，我也会不断努力，让我的梦想越来越大，我能够一直奋斗下去。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_4">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>杨烨炘 Forest Young<br />
+                                上海盛世长城创意群总监</span> </li>
+                        <!--   <li>
+                            <label>采访时间：</label><span>2013年2月26日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>老实说，我的梦想都挺实际的。98年刚进入广告业时，我的梦想是在国际4A混个美术指导，可惜梦想实现太快，接下来的梦想就是如何不被4A炒掉。</p>
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people04_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <p>99年我的梦想是在广州4A年轻人创意大赛上拿个奖，以便引起姑娘的注意和老爸老妈的欢喜。<br />
+                        02年的梦想是坐上4A创意总监的宝座，04年坐上后又想着在Cannes等国际赛事上入个围。<br />
+                        07年的梦想只是希望能够在腥风血雨的北京奥美保住小命，顺利从临时工转正为CD。<br />
+                        09年拿到Cannes银狮后又想着拿金狮，11年拿到金狮后又想着拿钛狮，欲海无边啊！<br />
+                        12年春节，突然顿悟了，佛法无边度众生，人文主义广告救天下！今天，我的梦想是创作出对人类社会有贡献的作品。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>我一好色，二好名，三好财，人类所有的弱点都在我身上发扬光大，自然是因果报应，人生如履薄冰。</p>
+                    <p>后来，我想通了，每一次的困难都是对我最好的学习。因此，我常怀感恩之心，感恩不理我的姑娘，感恩羞辱我的坏名声，感恩狗屎般的财运。我每一天想一件开心的事，日日是好日，时时是好时，人人是好人，事事是好事，人生也开始破迷开悟，拨云见日。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>信仰的力量。07、08年可说是我人生的低谷，幸运的是我遇到了一张光碟，是净空老法师的《和谐拯救危机》。对于佛教，有了全新的认识，过去的我总是求神拜佛的，把佛当作了保佑我升职加薪的神仙。现在，才认识到佛教其实就是佛陀的教育，教育你重新观看这个世界，了解宇宙人生，告诉你如何过上圆满幸福的人生。</p>
+                    <p>有所感悟的我开始放下了一些乱七八糟的贪欲，减少了泡妞的机会，对于功名和钱财也少了期待，慢慢的变得没那么利欲熏心了，把所有的力量集中在一个点上，于是走出了低谷。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>中国本土创意人已经崛起。纵观这些年在世界上摘金夺银的作品大多出自于本土创意人之手，在市场上所向披靡的实效广告也大多出自于本土广告人之手。中国本土广告人和外籍广告人的差距只是语言上的差距，以及关系网和利益链上的差距。在互联网和社交媒体的冲击下，中国与世界的距离在缩短，中国本土创意人可以在第一时间学习到世界最新最领先的创意观念、设计思潮、艺术创造样式、文化生态和经济增长模式。中国本土创意人和国际创意人已经站在了同一个起点上。</p>
+                    <p>虽然，我们中国还没有成为世界创意的中心，还没有创造出影响世界的中式创意，还没有诞生世界一流的本土创意热店。这也给了我们很多个机会，去改变历史。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>舍得。一心不乱。精进。</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>既是弹指一挥间，又是三十二亿百千光年。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_5">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>刘月梅 Shel Liu<br />
+                                Being TBWA\上海 总经理</span> </li>
+                        <!-- <li>
+                            <label>采访时间：</label><span> 2013年2月28日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>进入广告行业纯属偶然，但偶然中又有着必然，总觉得像恋爱一样，早晚会遇到，逃也逃不掉！</p>
+                    <p>最初的梦想就是可以往上走，一步步做上去！</p>
+                    <hr />
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people05_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <h5><strong>★</strong> 你对自己目前的职业成就满意吗？觉得现在离自己梦想目标还有多远？</h5>
+                    <p>不错，从业16年，就像是结婚16年，但感觉现在还是热恋期，依旧充满激情！</p>
+                    <p>不是很远，只是随着时间的流逝，目标也一直在变化，就像AE的目标是AM, 真到了AM，又目标AD了,目标也是无止境的！
+                    </p>
+                    <hr />
+                    <h5><strong>★</strong> 对中国广告行业的目前发展有什么看法？你怎么理解“广告人的中国梦”？</h5>
+                    <p>本土的广告行业起步晚于国外，但从好的方面来说，中国广告的发展空间更大，市场也更大！现阶段，广告业与市场营销结合的更加紧密，而营销手段的多元化，市场的日趋成熟以及新型传播媒介的多样化，则要求广告形式不断创新。</p>
+                    <p>“广告人的中国梦”，我的理解是：让全世界关注到中国市场，关注到中国人做的广告，和中国消费者联系更加紧密的广告！</p>
+                    <hr />
+
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>激情，坚持，机遇</p>
+                    <hr />
+                    <h5><strong>★</strong> 是什么支持你在广告这条道路上，一直走下去？</h5>
+                    <p>激情。就像婚姻中一直要保持恋爱的感觉一样，一定要有激情，这是最关键的。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_6">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>刘颖昭 Cobe<br />
+                                旭日因赛合伙人 事业群总经理</span> </li>
+                        <!--  <li>
+                            <label>采访时间：</label><span>2013年3月22日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>因为人生有限，能感触的时光、认识的事物、人都有限，尽可能地创造有生命力的文字、观点和作品，去影响无数我永远不可能认识的人，让思想代我抵达我永远去不到的地方，这样我的生命换了一种形式无限，那才叫真正的活。</p>
+                    <hr />
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people06_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>大学毕业揣着500块钱来到广州，卖过户外灯箱位，待遇是300块包中午盒饭，一个月没卖出一块广告牌，后来300块一分也没给我，曾经因缺乏经验从1500元被降薪至1000元，下班回家要倒2小时车，经常困得不行的时候被中巴赶下来换乘另一部中巴，到终点站时不知身在何处，身上2块钱都不剩……曾经住在6平米没有窗户的单间将近一年，见不到阳光，没有热水，大冬天先赤膊把上身拍热，兜头一桶冷水……衣服都是靠自然荫干，隔壁邻居都是走南闯北混社会的地痞，晚上楼下经常有人打打杀杀。</p>
+                    <p>我从没动摇和放弃过，2000年时服务海尔华南事业部，代理中国第一的家电品牌，帮最贵的冰箱、空调、洗衣机、彩电、热水器做广告，我却连一个冰箱、空调、洗衣机、彩电、热水器都买不起，但我依然帮海尔拿了很多全国广告大奖和帮助华南海尔开创非常多的全国创新模式，我即使穷也从未觉得低人一等过，因为穷不可怕，梦想、激情、知识的贫乏才可怕，那时候没有现在这么强大的互联网，什么都能搜索到，只有靠腿比别人走更多的路，看更多的东西，我在杂志和卖场里看到任何很棒的平面广告、电视广告分镜、画册和单张，都会收集好，摘录里面的好标题、好创意。我坚信有一天，我会走出这个6平米没有天日的单间……生活和世界会为我改变。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>责任：因为时代的动荡，我的父母从小就岁月艰辛，在文革又经受了我难以想象的十年苦难，父母年幼时我爷爷奶奶外公外婆都已去世，我们兄弟姐妹三个从未见过爷爷奶奶外公外婆，因为父母抚养我们时候的清贫和奉献，我不想让父母再为我担心，不想让家庭再为我付出，我要通过自己的努力让父母过更好的生活。</p>
+                    <p>激情：自己的明天只有自己才能创造，我曾经对生活条件、环境和工作选择的妥协就是为了以后的不妥协。</p>
+                    <p>信念：每当我翻开很多触动人心的广告和品牌，就告诉自己，总有一天，这些都是我做的。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>其实再著名的国际公司在自己的国度都是本土广告公司，在他们享誉世界前，他们都是“本土人”。</p>
+                    <p>只有中国人最了解中国的历史、精神、文化、品牌、现在、未来，而广告就是时代精神和文化的缩影，唯有中国人能够以中国人的方式最恰当又最震撼的表达，随着中国广告人摘得众多国际广告顶级奖项，随着中国品牌大步走向世界，随着越来越多的中国广告人娴熟的掌握英文，很多曾经的鸿沟被踏平，很多不屑地轻视转变为重视。</p>
+                    <p>以前本土人在外资广告公司根本没有出人头地的机会，即使你能力再强，再勤奋投入心血和汗水，换不回公平。现在很多出色的本土人可以做到外资广告的中高层，但绝少会让你进入核心经营层，你作为核心骨干连连斩获众多大客户，依然不给你招人和组织团队的权利，依然几年不给你和团队晋升的机会，依然把大部分盈利给了少数人，依然你无法参与公司大战略的决策，依然你是一枚被动的棋子。</p>
+                    <p>我心中的“广告人的中国梦”，是中国人自己创立的广告公司在全球发光发热，中国广告人的营销案例、创意作品带着深深的中国烙印却又让世界不得不叹服。全球品牌在内心真正尊重中国广告人，把中国广告人和中国广告公司放在核心伙伴的位置。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>敢放弃、敢追逐、敢带头。</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>近期的梦想：通过我们才华的展现，让更多的外资企业选择我们公司而不是外资广告。例如让日资企业不再固守由日系广告公司服务，我们目前已经部分实现。</p>
+                    <p>长期的梦想：帮助公司成为上市的中国本土广告旗，距离实现还有3－5年，如果志同道合的朋友多，距离会更近一些。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_7">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>朱晓霆 Perth<br />
+                                旭日因赛合伙人 创意群总监</span> </li>
+                        <!--  <li>
+                            <label>采访时间：</label><span>2013年3月28日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>记得还在我初中的时候，八几年左右吧，那时候我可以同时看到本土与香港的电视，在换台时候，经常出现这样一幕：一边全部广告都各种是“省优国优部优”，另外一边是各种“人头马一开，好事自然来”，当时的我忽然发现原来广告可以这么吸引人，然后，就有了“我要做让人喜欢看的广告”这个单纯的梦想，而这个梦想顺利成章成为我入行时的梦想。</p>
+                    <hr />
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people07_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>钱，名誉与新鲜感这三个淘气的朋友经常扔糖给我，对于射手座的我来说可真是要命。我会忽然想是不是创造个生活用品的设计师品牌？当个环球美食写手？投身基金界，甚至，开个古法按摩院？我身体里不时有一个声音在问：广告能继续做下去吗？</p>
+                    <p>但幸运的是，每一次，心里都有另外一个更加坚定的声音回答：你不做广告你能做啥？乖乖地滚回去做广告！</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>“自信”这两字支持我度过最困难时期，不过，“自信”是一把双刃剑，在你低落的时候可以帮助你度过很多困难，但在事情变得很顺利的时候，他又很容易蒙蔽你的眼睛，让你自视太高，很有可能你就会陷入下一个困难。所以我经常告诫自己要处理好和这个好朋友之间的关系，路上困难就会少点。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>我相信每一个本土广告人，都不希望自己工作的地方成为殖民地的，都希望在相对公平的平台与其他国家的广告人同台竞技，这更多是一种尊严吧。</p>
+                    <p>如果把广告比喻成国家，那本土广告人现在最渴望得到的是独立与平等。当然，这个独立与平等是需要用战绩来赢取的。如果这也算一场战争的话，就现在来看，本土广告人打得还不错。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>快乐 坚持 无悔</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>“做让人喜欢看的广告”如果从单结果来看，很早就实现了。可惜，欲海无边，我其他的梦想还在远处摆出一副臭了不起的样子向我招手，真是见鬼。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_8">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>陈九南<br />
+                                旭日因赛合伙人 西安分公司总经理</span> </li>
+                        <!--   <li>
+                            <label>采访时间：</label><span>2013年3月5日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>当初入行是被广告的神奇感所打动，在我的感觉中广告创意人和圣殿骑士一样有超能力。</p>
+                    <p>记得2001年刚毕业的时候，长沙黄兴南路步行商业街正在改建。不久之后的一个上午，老板要我拿下这个新项目，当时真有点新娘上轿的感觉，紧张又惊喜。一天加上一个通宵，赶出5张形象稿，第二日清晨6点抢在客户去机场的空隙去提案，没想到客户当场全部通过。很快满大街挂的都是自己创作的商业街广告，那个感觉真是无比狂喜而又恍如做梦般美好。</p>
+
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people08_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <p>自信心爆棚，一发而不可收拾，就有了“要做有影响力的广告”的梦想。处处想展示自己的能力，老是琢磨一些有趣的东西，尝试去挑战一些既定的标准。当时的年少轻狂，现在反观，觉得既珍贵又可爱。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>要说诱惑还真遇到的比较少，2002年可以算一次。那时深圳的设计风潮正盛，那年8月底我决定离开长沙投奔深圳。现实和理想总是有段距离的。我和同去的朋友两人身上总共不过几百块钱，买了台BB机共用着找工作，就所剩无几了。美好的愿望，很快就跌入了困境：从一天三顿泡面，到一天两顿泡面，又到一天一顿泡面，直挨到国庆前夕，一间设计公司才向我招手。工作是有了，但薪水要一个月后才出。幸好借住在清水河朋友的出租屋，一时不用分担房租，也就更不好张嘴借钱。没钱坐车，每天只好走路到华强北上班，下班再走回去；没钱吃饭，中午就在公司外面没人的地方转悠……幸好国庆节老板要求我加班，得知我几乎身无分文，提前借支了一点，算是活过来了。</p>
+                    <p>让人成长的不是时光和岁月，而是经历和磨练。当年去深圳一点都不后悔。后来也焦躁过彷徨过，但更多的时候是遇到问题去找答案。为什么同样的处境和问题，别人处理的如此之好？面对诱惑也在反思自己，问自己的内心，到底在追求什么？随着阅历的丰富，会发现这些诱惑、困境都是路上的风景，而自己要做的就是不断体会和领悟，这样会真正有利于自身能力的发挥，也更能坚定当初的选择。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>最困难的时候，我依然相信本真做人的道理和广告创作带来的社会价值。当你认同这些理念时，你就会有无尽的勇气和力量。 </p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>正如奥斯卡和诺贝尔文学奖一样，用创意去征服世界各大顶级广告奖项仍是本土广告人现阶段的情结。</p>
+                    <p>不过，我以为“广告人的中国梦”肯定是超越了单纯的创意奖。它对我们广告人提出了更重的责任、更高的使命——应站在全球平台和民族复兴的战略高度，去思考自身和行业的价值蓝图和终极意义。这个宏伟的战略框架往下落地的时候，就需要我们能真的用创意去推动中国，比如促进经济从制造升级创造，改善大众生活品质，改良社会人文氛围，乃至藉由创意的方式向全世界传播中华民族的和谐文化。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>责任、激情和行动力。</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>每个阶段的追求和梦想是不同的，随着能力的增大和责任的加大，梦想也变得更大更远。对我而言，没有成功，只有成长；没有终点，只有接近……</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_9">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>任妙玲 Fanny Yum<br />
+                                睿狮中国全国董事总经理</span> </li>
+                        <!-- <li>
+                            <label>采访时间：</label><span>2013年2月28日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>毕业后，没有想过做广告的。 原来的梦想是电视或舞台的Producer。但投了很多简历都没回音。 后来，有人问我要不要试试 4As广告公司做 AE， 那我也觉得比没事做好，就去面试了，一做就做到现在。</p>
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people09_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <p>所以，每次有人问我入行的梦想我都会觉得有点尴尬，我是误打误撞进广告的，原来是没什么梦想的。 但当然，入行后很喜欢这行业。每次接到brief的时候都会当作是一个梦想的开始，希望能做出倾国倾城的campaign，做出惊艳世人的广告，让消费者爱上一个品牌。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>对于客服管理出身的我来讲，每天都要在最前线，广告梦想也自然也会遇上的很多困难和挑战。不同品牌对广告的要求和目的跟自己的广告梦想也都会有不一样。不过这也是广告的魅力所在，每天都是崭新的东西，所以广告人变老很慢…… </p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>我老爸跟我说过一句话，“放弃是最简单和容易的解决方法，但也是代表你认输了”。我怎么可以这么容易认输？！</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>相信很多人都会说要把中国的广告和品牌做到世界水平，甚至超越它们。 但我的看法是我们业内、广告主以及做市场的每一位同仁，把对品牌和广告的理解、手法整体提升，才能实现“中国梦”。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>坚持、 勤奋、 远见</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>还有距离， 我还没有亲手打造出一个倾国倾城的品牌和广告。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_10">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>李实衍 Shih-Yen Lee<br />
+                                DDB上海执行创意总监</span> </li>
+                        <!--  <li>
+                            <label>采访时间：</label><span>2013年2月28日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>我记得入行的第一年，我第一次参加了一个创意广告的颁奖典礼，我的作品虽然得以入围，但我只能坐在台下眼巴巴地看着别人上台领奖。从那时起，我有了一个很单纯的想法：既然来了，就不要坐在台下。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people10_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+
+                    <p>我相信任何一个人都会面临到所谓的"困境"。对我来讲，最大的困境就是给自己设下更多新的标准与期许。就如同奥运选手，每为自己刷新一次纪录，就会为自己设下另一个高于标准的挑战。你可以说这是对于追求梦想的一种执着，但我常觉得这只是一种无可救药的"瘾"。</p>
+                    <p>曾经动摇或想要放弃？……从未没有，但我喜欢选择"短暂的出走"，因为所有广告创意人都有一个不安定的灵魂，所以我曾离开去学习做一个导演，也曾经离开去做一个编剧，这并不是我想要放弃作广告的瘾头，我只是想要尝试更多不同的关于创作的各种可能。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>全世界的创意奖项，我还缺了几座金。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>广告人的中国梦，目前都只是在中国做梦，中国的确有很好的市场、客户、创意人员，我相信我们有能力、也有责任，把我们广告人的中国梦做的更大更远。于是"出走"就变成是一种必须，若有一天王老吉的广告能在美国职业足球的电视转播中播出时，或是欧美4A广告公司你看到更很多东方的脸孔，那就是中国人的广告梦做到世界各地的时候了。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>热情、坚持和房贷</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>梦想就如同一颗胡萝卜，永远距离我的嘴巴三寸之远。而梦想的终点就是另一个新的起点。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_11">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>徐章烨 Danny Xu
+                                <br />
+                                浩腾媒体(OMD) 广州董事总经理</span> </li>
+                        <!--  <li>
+                            <label>采访时间：</label><span>2013年2月28日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>在刚进入广告业的时候，我的梦想就是希望在全球最具创意最有实力的广告公司中创造出哪里都能看见的好广告，因为那足以让我感到一种追求的满足感，无论这个行业需要我怎样的付出，因为年轻无极限。</p>
+                    <hr />
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people11_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>“不停的被否定”，“无数夜晚的煎熬”，“连续72小时在办公室”，“互联网新生行业的召唤”，“甲方的邀请”，“女朋友的不解与抱怨”，“父母的困惑与心疼”，“天才与白痴界限的模糊”，“专业与关系的困惑”⋯⋯太多太多的各种诱惑与困境了，时间越久，味道越浓！</p>
+                    <p>尽管诱惑与困境永无止尽的存在着，但是却来不及动摇和放弃：）有个剑桥大学的博士朋友告诉我，这个年代是“剩者为王”，必须坚持就是胜利！</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>信念让我走到了现在，因为我相信天生我才必为广告。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>“艺术无国界”“创意无国界”“广告无国界”，中国本土广告人的中国梦，我认为是有一天，无论在全球任何国家，任何城市，任何媒体，无论是国外的品牌还是中国的品牌，都可以看见中国广告人创造的好广告</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>坚持，热爱，生活</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>我一直在永不止步的追求着广告人的中国梦，至少现在的我知道梦想在哪里，也知道如何去追梦，我享受着这个追梦的过程，酸甜苦辣的广告人。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_12">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>束非 Gordon Shu<br />
+                                TBWA\上海创意群总监</span> </li>
+                        <!--   <li>
+                            <label>采访时间：</label><span>2013年2月25日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>在高中，已开始读广告原理的书，并早早确立了大学报考广告专业的志愿。可以说广告是梦想，但当时的真相是：在国际贸易国际金融财务会计专业大热，而说起做广告就以为是刷路牌的90年代早期，严重偏科的我，需要早点为自己规划一个不偏不倚的职业。</p>
+                    <hr />
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people12_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>也许是命好，好像只有诱惑，甚少烦恼。 诱惑是刚入行总觉得有更好的公司，更好的老板，更好的客户，更好的待遇等着自己，于是不断兼职，频繁跳槽。但当真正进入在那个年代还位居神坛的4A后，反而安了。曾在一家公司前后一呆15年，期间面对各种利益劝诱，动过花心，但终因宅男的朴素本性，直到第16年才出柜换东家。</p>
+                    <p>如果真要说困境，倒不如说困惑。回首走过的路，做过的活儿，居然有与时俱退的赶脚。入行前五年，这个行业还能看到不少单纯犀利言之有物的Idea真的出了街，有腔调的客户也比比皆是。但今日，满眼多是有形式少内容无观点拼执行的玩意儿。是市场成熟了？还是我们世故了？我不知道，但因为这个放弃，岂不是助纣为虐？</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>在职业生涯第10年，我裸辞过一次。那时倒真的有种突然的惶恐感。因为瞬间觉得自己原来相信的坚持的引以为傲的东西，变得不那么确实可信了。是不是该做点别的事情，混个别的圈子，看看自己的上限和底线到底在哪里⋯⋯结果，离开上海，离开圈子，由着本性漂了一阵。最后，还是这个行业本身，又召回了我的魂。不是谁，都能把自己的兴趣，变成一份职业，而且还能招摇过市的，知足吧。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>中国梦，很大的定义，很大的信息量。早年，中国梦就是戛纳梦，我清晰地记得中国军团第一次出征带了四百多件作品，最后全军覆没。但时过境迁，今天MADE IN CHINA 的作品早已在各大奖项频频露脸，这是圈内的幸事。但这其中，真正由本土创意人主导的作品有多少？所以，“广告人的中国梦”是在中国做广告的广告人的梦，还是中国广告人成就中国广告的梦？很绕，但其实不重要。创意本就是世界语言。一个本土的创意人，只要心怀国际观，中国心，就有机会做出让全世界都看得懂的创意，而如果全世界都还能为之喝彩，那才是真正的中国梦实现。看看李安吧，我们的路长着呢。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>少想，多做，平常心。</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>我已经让兴趣成为了我的终生职业（目前看起来是的），我的梦想已经实现了。而之后从中获得的任何东西，都是赚到了。不过，谁不想多赚点呢？</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_13">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>吴兆华 Jamo Woo<br />
+                                网迈广告全国策略总监</span> </li>
+                        <!--  <li>
+                            <label>采访时间：</label><span>2013年2月28日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>因为大学里读的就是广告，能够找到一份专业对口的工作已经感到十分理想了。因为原本的求职意向是策略部门，但面试了几家都铩羽而归，第一份工作落实在李奥贝纳上海的客户部门后，发现有机会当面像大名鼎鼎的沈柏屏老师请教就非常兴奋。接触之后就很想成为像他那样儒雅、专业、受人尊敬的策略总监。</p>
+                    <p>那时候的广告业特别是4A集团高层都清一色的非中国护照持有者，与其说有梦想不如说是痴心妄想，呵呵。</p>
+
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people13_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>其实我很快就暂时搁置了自己的目标，做了五年客户服务（记得在李奥贝纳是美其名曰品牌管理），原因很简单，因为自己在大学里学的专业是广告而课余爱好是互联网，于是干了三个月传统广告后就转投数字营销的浪潮。在李奥贝纳内部数字人才真空的情况下立马进入了上升通道，国外总部的工作经验和火箭升空的升迁速度也让我经历了职业生涯中最膨胀的一段日子。</p>
+                    <p>不过我倒从未萌生离开这行的念头，我觉得自己干不了任何别的事情。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>我是幸运的，没有碰到过什么困难。可能真的碰上了，我也就离开了。唯一的一次想打退堂鼓，是在通宵一夜项目上线后收到了一封客户质疑我能力的邮件，我还记得我一个人跑到天台，坐在烈日下心里却是冰凉的。五分钟后接到了CEO的电话，他说他非常信任我，会和我一起来解决问题。后来这个项目成为了公司在数字营销领域的代表作，也是该品牌最为人称道的数字营销案例。</p>
+                    <p>做广告最重要是遇见伯乐。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>我的那个梦隐约清晰是在服务了一个本土品牌之后，看到塑造品牌的过程中有自己越来越重要的参与，想到了NIKE和WK的故事，恕我斗胆，就是有朝一日做一家中国的WK，打造中国的NIKE。其实，广告人的中国梦就是中国人的品牌梦。这两年目睹了一些品牌的所作所为后，我开始变得不那么确定了。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>心灵鸡汤我炖不来。如果是说想要在这个行业有所作为的话，我认为比较重要的三点是：基础扎实，热情不止，遇见伯乐。</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>三十岁之前就把梦想给实现了那人生多无趣啊，哈哈哈。我会告诉你我其实一直想成为一名建筑师吗。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_14">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>陈海 Tony Chan<br />
+                                广州市橙盟（数字营销）董事总经理</span> </li>
+                        <!-- <li>
+                            <label>采访时间：</label><span>2013年3月5日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>换一种活法，体验不一样的我！</p>
+                    <p>我一毕业就进入国企事业单位，工作生活轻松自在甚至无聊，直到有一次我结识了一位来自海外的广告公司的朋友，从他那我知道了什么是品牌，什么是4A广告公司，什么是概念，什么是执行，在广告公司，每天都能见不同的客户，做不同的产品，创作不一样的创意，这样的工作生活很适合我，从此就走上了广告这条充满了变化和挑战的路，生命短暂，但必需丰富多彩！</p>
+
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people14_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>诱惑与困境是相对的，对不同的人有着不同的感受，对于我来讲，最大的诱惑是来自身的惰性，克服自身的惰性是我最大的挑战，而困境对我而言有时候反而是一种动力，举个例子来讲，当你做到一定的职位时候，当你遇到天花板的时候，有人会想到不公和抱怨，但是我更多时候会莫名的兴奋，也许这种天花板的压力预示着另一条出路的来临，所以这十几年来，从创意到业务，从传统到新媒体，面对不一样的挑战、体验不一样的经历是我最初的梦想，这个梦想从没放弃。</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>是勇气！我想每次遇到职业瓶颈的时候，我都会勇于专业的突破，不给自己任何借口，面对广告行业的变化，我们都应该拥抱变化，敢于变化。</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>我觉得“广告人的中国梦” 的核心是中国，创造中国特色的创意作品、创建中国特色的国际广告公司、创立属于中国特色的营销体系，都是基于我们要开创属于我们中国人自己的广告事业。中国广告已经从中国本土创意的崛起走向了新的一个阶段。</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>体验 勇气 突破</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>梦想是阶段性的，每个阶段的梦想实现后，我都会找寻下一个梦想，我下一个梦想是希望在新媒体、大数据时代下创造一家基于中国人数据研究的数字营销公司，而这一次中国与国外同行在这个领域正处于同一个起跑线，与国外公司来一场真正的较量，我想这就是我的“中国梦”吧。</p>
+                </div>
+            </div>
+        </div>
+        <div id="divPeopleDetail_15">
+            <div class="detailInfo divPeopleDetail">
+                <div class="detailInfo_t divPeopleDetail_t">行业人士专访</div>
+                <div class="divPeopleDetail_c1_l">
+                    <ul>
+                        <li>
+                            <label>采访人物：</label><span>吴宏山 Sam<br />
+                                旭日因赛合伙人 事业群总经理</span> </li>
+                        <!--  <li>
+                            <label>采访时间：</label><span>2013年3月26日</span></li>
+                        <li>
+                            <label>采访形式：</label><span>邮件形式采访</span>
+
+                        </li>-->
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <hr />
+                    <h5><strong>★</strong> 在进入广告业之初，你的梦想是什么？</h5>
+                    <p>初入行，那时还谈不上什么梦想，先考虑的是如何能展现自己，如何能获得公司的认可，如何能独立在社会上生存。大学时跟老师开了一间装饰工程部，做广告招牌制作，生意还不错，毕业后我把档口转给了跟我的一个工仔，因为觉得制作不适合自己，读了商业美术，跟老师学设计、做墨稿、跑植字、跟电分......总希望学以致用，如果谈梦想，现在回想起来，应该是“希望自己的专业能创造更大的价值”吧！毕竟我喜欢创作，而不是制作！</p>
+
+                </div>
+                <div class="divPeopleDetail_c1_r">
+                    <img src="image/people15_b.jpg" />
+                </div>
+                <div class="divPeopleDetail_c2">
+                    <hr />
+                    <h5><strong>★</strong> 在追梦与实现梦想的路上，你曾经面对过怎样的诱惑与困境？曾经动摇过或者想放弃吗？</h5>
+                    <p>我相信一句话：在人生的路上，不会一步就踏上那块梦想的金砖，当你踏上时，回过头来，步步都是金砖！</p>
+                    <p>很高兴自己选择了一条做广告的路，因为喜欢所以上路，在路上我得到乐趣，自己的能力得以释放，我是一个喜欢替别人着想的人，而广告就是一个替别人着想的行当，能通过解决问题的创造力去不断创造价值，是推动我执着向前的力量；</p>
+                    <p>最大的诱惑是在我第一家台湾人开的广告公司工作一年后，因为人工太低，过去开档赚的钱都消耗殆尽，存折只剩500元，连房租都交不起的时候，看到了当年旭日广告的招聘广告！1997年7月我进公司，真正的上路了，到2013年的今天，还没有发现比之更大的诱惑。</p>
+                    <p>路上困境倒是有很多，每到一个阶段都会遇到能力提升的瓶颈，需要不断学习和实践去历练，幸好公司在专业能力提升方面的投入在不断加大，公司在成长，自我能力也得到成长，我相信一个好的平台，一个能给你信心、给你机会、给你帮助和让你尽情创造价值的平台，任何的困难和诱惑都不会动摇，更不会轻言放弃！</p>
+                    <hr />
+                    <h5><strong>★</strong> 在最困难的时候，是什么支撑你一直走到了现在？</h5>
+                    <p>我没有最困难的时候，因为我相信任何的困难都可以想办法解决，问题是你是选择面对还是逃避，不知是不是长期在充满压力下工作的原因，时不时会在睡梦中遇到鬼怪向你扑来，压着自己全身动弹不得，但每次到最贴近、最恐惧的时候，我都会咬着牙告诉自己不要怕，向他冲去，然后在梦中醒来......也许是这种勇敢、积极的心态让我面对现实的困难和挑战，也是这种积极的心态，支撑自己走到现在！</p>
+                    <hr />
+                    <h5><strong>★</strong> “中国梦”是2013年的热词。关于中国本土广告人的发展，关于中国本土创意的崛 起，你是怎样理解“广告人的中国梦”？</h5>
+                    <p>每个广告人随着不同阶段的成长、认识和感悟，都会有不同的梦......“广告人的中国梦”，本土广告人首先是中国人，每一个中国人都希望民族复兴、祖国富强、人民幸福......</p>
+                    <p>每一个中国本土广告人都有责任用创意的力量去构筑和实现梦想，并为之奋斗......</p>
+                    <p>中华民族之崛起，就是中国创意之崛起！</p>
+                    <hr />
+                    <h5><strong>★</strong> 请讲出你认为实现梦想的三个关键词。</h5>
+                    <p>勇于突破、执着向前、推己及人</p>
+                    <hr />
+                    <h5><strong>★</strong> 你离梦想，还有多远？（你的梦想，实现了吗？）</h5>
+                    <p>我离梦想还有一站路，我还在路上，要实现梦想，需要更多的广告人共同上路，到旭日因赛找到你的同路人吧！......</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hide">
+        <!-- 这里是招聘的详细 -->
+        <div id="divJobDetail_1">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：经营管理及客户服务类</div>
+                <h4>事业群总经理（职位编号No.001～005） 5名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 业务经营：开发新客户，领导和管理事业群对客户的经营和服务，完成事业群年度经营目标，对经营结果负责；<br />
+                    ● 策略规划：把握市场趋势，洞察消费者，制定品牌营销传播策略，指导撰写策略报告，负责重要项目的提案；<br />
+                    ● 团队管理：组织架构团队，吸纳和培养人才，提升团队专业水平及工作效率； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：本科以上学历，10年以上工作经验，曾服务大型4A广告公司，参与创造在业界有影响力的品牌传播案例；<br />
+                    ● 核心能力：经营管理能力，策略策划能力，客户开发与服务能力。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上事业群总经理职位的特殊要求 </h5>
+                <p>● 职位编号 No.001<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有互联网行业客户的服务经验，负责服务互联网及电商行业的客户（B2C）  
+                </p>
+                <p>● 职位编号 No.002<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有快速消费品行业的服务经验，对时尚敏锐，负责服务快速消费品行业的客户 
+                </p>
+                <p>● 职位编号 No.003<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有医疗保健行业服务经验：负责服务医疗保健行业的客户（医药、医院、医疗器械、保健品等） 
+                </p>
+                <p>● 职位编号 No.004<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有时尚服饰行业服务经验：负责服务时尚服装服饰行业的客户
+                </p>
+                <p>● 职位编号 No.005<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有快速消费食品行业服务经验，负责服务快速消费食品行业的客户（烟酒、食品等）
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_2">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：经营管理及客户服务类</div>
+                <h4>客户总监（职位编号No.006～010） 5名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 策略规划：了解市场趋势，洞察消费者，制定品牌营销推广策略及撰写策略报告，对客户服务品质负责；<br />
+                    ● 团队管理：指导及带领团队服务1～2个品牌的年度传播推广工作；<br />
+                    ● 业务经营：维持并发展现有客户业务，负责项目报价、沟通与谈判，指导项目实施、工作完成确认及督促收款； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：本科及以上学历，6年以上工作经验，曾服务于大型4A广告公司；<br />
+                    ● 核心能力：服务沟通能力，策略策划能力，项目管理能力。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上客户总监职位的特殊要求 </h5>
+                <p>● 职位编号No.006<br />
+                    ● 工作地点：北京
+                <br />
+                    &nbsp;&nbsp;具有通讯行业服务经验，负责服务通讯行业的客户（电信运营商、IT等）  
+                </p>
+                <p>● 职位编号No.007<br />
+                    ● 工作地点：上海
+                <br />
+                    &nbsp;&nbsp;具有汽车行业服务经验，负责服务汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等）
+                </p>
+                <p>● 职位编号 No.008<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有快速消费食品行业服务经验，负责服务快速消费食品行业的客户（烟酒、食品等） 
+                </p>
+                <p>● 职位编号 No.009<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有通讯行业服务经验，负责服务通讯行业的客户（电信运营商、IT等）
+                </p>
+                <p>● 职位编号 No.010<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有医疗保健行业服务经验，负责服务医疗保健行业的客户（医药、医院、医疗器械、保健品等）
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_3">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：经营管理及客户服务类</div>
+                <h4>客户经理（职位编号No.011～018） 8名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 项目管理：统筹各方资源，高品质、高效率完成项目任务，负责跟踪执行及工作交付；<br />
+                    ● 策略撰写：参与传播推广项目策划，跟踪消费者调查研究，撰写各类项目提案及参与策略提案；<br />
+                    ● 业务经营：负责第三方成本核算、合同报价及谈判，监督合同实施及收款；  
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：广告、新闻传播等专业本科及以上学历，4年以上同等职位经验；<br />
+                    ● 核心能力：服务沟通能力，项目统筹及管理能力，策略撰写能力。</p>
+                <hr />
+                <h5><strong>★</strong> 以上客户经理职位的特殊要求</h5>
+                <p>● 职位编号 No.011<br />
+                    ● 工作地点：上海
+                <br />
+                    &nbsp;&nbsp;负责服务汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等）
+                </p>
+                <p>● 职位编号 No.012<br />
+                    ● 工作地点：北京
+                <br />
+                    &nbsp;&nbsp;负责服务通讯行业的客户（电信运营商、IT等） 
+                </p>
+                <p>● 职位编号 No.013<br />
+                    ● 工作地点：西安
+                <br />
+                    &nbsp;&nbsp;负责地产或旅游、文化、能源、快速消费品等行业的客户 
+                </p>
+                <p>● 职位编号 No.014<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责服务汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等） 
+                </p>
+                <p>● 职位编号 No.015<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责服务快速消费品行业的客户（烟酒、日化、食品、化妆品等）
+                </p>
+                <p>● 职位编号 No.016<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责服务服装服饰行业的客户（男装、女装、童装、运动与休闲服及服饰等） 
+                </p>
+                <p>● 职位编号 No.017<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责公关活动的客户开拓、执行跟进、项目管理，有大型公关公司工作经历 
+                </p>
+                <p>● 职位编号 No.018<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责设计公司的客户开拓、执行跟进、项目管理，有知名设计公司工作经历
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_4">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：策划类</div>
+                <h4>策略合伙人（职位编号No.019～020） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 策略规划：能够独立带领团队完成品牌战略规划咨询项目；<br />
+                    ● 项目管理：安排企业内外部调研、消费者调查，统筹资源，管理工作进度，做到及时交付；<br />
+                    ● 顾问式服务：深刻理解客户需求，及时解答、解决客户的问题，成为客户的品牌战略顾问；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：市场营销、新闻传播及相关专业本科及以上学历，10年以上相关工作经验；<br />
+                    ● 核心能力：品牌战略规划能力，提案能力，独立策划多个在业界有影响的品牌战略规划与实施案例。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_5">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：策划类</div>
+                <h4>策略总监（职位编号No.021～027） 7名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 策略规划：组织实施品牌战略规划咨询项目、负责品牌战略规划及品牌传播推广策略方案的撰写及提案；<br />
+                    ● 项目管理：组织实施企业内外部调研、消费者调查，统筹内外部资源，管理项目工作进度，做到及时交付；
+                <br />
+                    ● 顾问式服务：深刻理解客户需求，及时解答、解决客户的问题，成为客户的品牌策略顾问； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：市场营销、新闻传播等相关专业本科及以上学历，8年以上工作经验；
+                <br />
+                    ● 核心能力：品牌战略策划能力、策略提案能力，独立策划过2个以上在业界有影响力的品牌战略策划案例。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上策划总监职位的特殊要求</h5>
+                <p>● 职位编号 No.021<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;精通房地产项目前期策划，具有知名地产策划公司的工作背景 
+                </p>
+                <p>● 职位编号 No.022<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;精通品牌战略规划咨询，具有知名咨询公司的工作背景 
+                </p>
+                <p>● 职位编号 No.023<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;精通公关项目及活动的整体策划、把控及监督实施 
+                </p>
+                <p>● 职位编号 No.024<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;精通通讯行业（电信运营商、IT等）的品牌战略策划
+                </p>
+                <p>● 职位编号 No.025<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;精通通讯行业（电信运营商、IT等）的品牌战略策划 
+                </p>
+                <p>● 职位编号 No.026<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;精通医疗保健行业（医药、医院、医疗器械、保健品等）的品牌战略策划 
+                </p>
+                <p>● 职位编号 No.027<br />
+                    ● 工作地点：西安
+                <br />
+                    &nbsp;&nbsp;精通房地产品牌战略策划
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_6">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：策划类</div>
+                <h4>策划经理（职位编号No.028～029） 2名 </h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 策略规划：负责制定品牌传播推广项目的策划方案，撰写品牌传播推广创意简报；
+                <br />
+                    ● 项目管理：参与组织实施品牌战略规划咨询项目；<br />
+                    ● 市场调研：收集、整理、分析所服务客户的市场和消费者信息，参与所负责项目的市场调查研究； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：市场营销、新闻传播等专业本科及以上学历，5年以上工作经验；
+                <br />
+                    ● 核心能力：品牌策略规划能力，品牌策划项目管理能力，策略提案能力。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上策划经理职位的特殊要求 </h5>
+                <p>● 职位编号 No.028<br />
+                    ● 工作地点：西安<br />
+                    &nbsp;&nbsp;具有房地产前期策划经验，或具备文化旅游、能源、快速消费品策划经验
+                </p>
+                <p>● 职位编号 No.029<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;掌握品牌战略咨询知识，具有知名咨询公司的工作背景
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_7">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：创作类</div>
+                <h4>创意群总监（职位编号No.030～035） 6名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 创意管理：指导创意发想及执行，不断追求创意突破，带领创作团队获取国内外重要奖项，对最终品质负责；<br />
+                    ● 团队建设：组织与架构团队，吸纳培养的创意人才，提升团队创意水平及工作效率；<br />
+                    ● 业务经营：与事业群总经理建立伙伴关系，共同对经营结果负责；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：本科及以上学历，10年以上广告创意经验，2年以上同等职位经验，曾服务于大型4A广告公司；<br />
+                    ● 核心能力：消费者洞察能力，创意意念提炼能力，沟通和提案能力，作品曾经获得行业重要奖项，参与创造多个在业界有影响力的品牌传播创意案例；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上创意群总监职位的特殊要求</h5>
+                <p>● 职位编号 No.030<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有互联网行业客户的创意服务经验，负责服务电商行业的客户（B2C）
+                </p>
+                <p>● 职位编号 No.031<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有快速消费食品行业的创意服务经验，负责服务快速消费品行业的客户（烟酒、食品等） 
+                </p>
+                <p>● 职位编号 No.032<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有医疗行业的创意服务经验：负责服务医疗保健行业的客户（医药、医院、医疗器械、保健品等）
+                </p>
+                <p>● 职位编号 No.033<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有服装服饰行业的创意服务经验：负责服务服装服饰行业的客户（男装、女装、童装、运动与休闲服及服饰等） 
+                </p>
+                <p>● 职位编号 No.034<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;对时尚敏锐，具有快速消费品行业服务经验，负责服务快速消费品行业的客户（化妆品、日化等） 
+                </p>
+                <p>● 职位编号 No.035<br />
+                    ● 工作地点：西安<br />
+                    &nbsp;&nbsp;具有地产行业的创意服务经验：负责地产或文化旅游、能源、快消品等行业的客户
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_8">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：创作类</div>
+                <h4>创意总监（职位编号No.036～041） 6名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 创意构思：根据策略指引，组织及指导团队发想创意，提炼创意意念；<br />
+                    ● 创意执行：指导团队通过文字以及画面等表达创意，提炼传播口号，并且以各种媒体形式展开创意执行；<br />
+                    ● 创意管理：指导及管理创意制作过程，确保按照计划及时完成工作，对创意出品品质负责；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：本科及以上学历，8年以上广告创意经验，2年以上同职位经验，曾服务于大型4A广告公司；<br />
+                    ● 核心能力：文字或美术功底，创意思维及表现能力，影视创作经验，作品曾经获得奖项。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上创意总监职位的特殊要求 </h5>
+                <p>● 职位编号 No.036<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有快速消费食品行业创意服务经验：负责服务快速消费品行业的客户（烟酒、日化、食品、化妆品等）
+                </p>
+                <p>● 职位编号 No.037<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有通讯行业创意服务经验：负责服务通讯行业的客户（电信运营商、IT等）
+                </p>
+                <p>● 职位编号 No.038<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有服装服饰行业创意服务经验：负责服务服装服饰行业的客户（男装、女装、童装、运动与休闲服及服饰等） 
+                </p>
+                <p>● 职位编号 No.039<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有医疗保健行业创意服务经验：负责服务医疗保健行业的客户（医药、医院、医疗器械、保健品等） 
+                </p>
+                <p>● 职位编号 No.040<br />
+                    ● 工作地点：上海<br />
+                    &nbsp;&nbsp;具有汽车行业创意服务经验：负责服务汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等）
+                </p>
+                <p>● 职位编号 No.041<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;掌握公关项目的整体策划，能把控大型活动，5年以上公关创意经验，优秀的提案能力、沟通技巧和人际交往能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_9">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：创作类</div>
+                <h4>创作组长（职位编号No.042～043） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 创意构思：根据策略指引，组织团队发想创意，提炼创意意念及传播口号；
+                <br />
+                    ● 创意执行：通过文字以及画面等表达创意，并且以各种媒体形式(影视、平面、网络)展开创意执行；<br />
+                    ● 制作管理：管理创意制作过程，确保按照计划及时完成工作，对创意出品品质负责；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：本科及以上学历，6年以上广告创意经验，2年以上同等职位经验；
+                <br />
+                    ● 核心能力：了解市场趋势，消费者洞察能力，创意呈现及表达能力，团队合作精神，作品曾经获得奖项。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上创作组长职位的特殊要求</h5>
+                <p>● 职位编号 No.042<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;具有通讯行业创意服务经验：负责服务通讯行业的客户（电信运营商、IT等） 
+                </p>
+                <p>● 职位编号 No.043<br />
+                    ● 工作地点：西安
+                <br />
+                    &nbsp;&nbsp;具有地产或文化旅游、能源、快速消费品等创意服务经验
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_10">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：创作类</div>
+                <h4>美术指导（职位编号No.044～049） 6名 </h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 创意构思：根据策略指引，发想创意意念及表现；<br />
+                    ● 创意表现：通过画面表达创意，完成或指导完成影视脚本、平面草稿等创意载体中的美术表现及设计编排；
+                <br />
+                    ● 创意制作：跟进影视及平面拍摄及广告成品制作，对交付工作的美术品质负责；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：广告、美术专业本科及以上学历，4年以上同等职位经验；<br />
+                    ● 核心能力：良好的创意思维，能驾驭各种美术表现。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上美术指导职位的特殊要求 </h5>
+                <p>● 职位编号 No.044<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责服务汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等） 
+                </p>
+                <p>● 职位编号 No.045<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责服务快速消费品行业的客户（烟酒、日化、食品、化妆品等） 
+                </p>
+                <p>● 职位编号 No.046<br />
+                    ● 工作地点：北京
+                <br />
+                    &nbsp;&nbsp;负责服务通讯行业的客户（电信运营商、IT等）
+                </p>
+                <p>● 职位编号 No.047<br />
+                    ● 工作地点：上海
+                <br />
+                    &nbsp;&nbsp;负责服务汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等） 
+                </p>
+                <p>● 职位编号 No.048<br />
+                    ● 工作地点：西安
+                <br />
+                    &nbsp;&nbsp;负责服务地产或文化旅游、能源、快消品等行业的客户
+                </p>
+                <p>● 职位编号 No.049<br />
+                    ● 工作地点：杭州
+                <br />
+                    &nbsp;&nbsp;负责服务通讯行业的客户（电信运营商、IT等）
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_11">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：创作类</div>
+                <h4>资深文案（职位编号No.050～055） 6名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 创意构思：根据策略指引，发想发想创意意念及表现；<br />
+                    ● 创意表现：通过文字表达创意，完成标题、内文、TVC脚本、广播稿等创意载体中的文案撰写；<br />
+                    ● 创意制作：完稿文字校对，对交付广告成品的文案品质负责；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：新闻传播、广告、文学等专业本科以上学历，4年以上同等职位经验；<br />
+                    ● 核心能力：良好的创意思维，能驾驭各种文体。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上资深文案职位的特殊要求 </h5>
+                <p>● 职位编号 No.050<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责服务汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等） 
+                </p>
+                <p>● 职位编号 No.051<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责服务快速消费品行业的客户（烟酒、日化、食品、化妆品等）
+                </p>
+                <p>● 职位编号 No.052<br />
+                    ● 工作地点：北京
+                <br />
+                    &nbsp;&nbsp;负责服务通讯行业的客户（电信运营商、IT等） 
+                </p>
+                <p>● 职位编号 No.053<br />
+                    ● 工作地点：上海
+                <br />
+                    &nbsp;&nbsp;负责服务汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等） 
+                </p>
+                <p>● 职位编号 No.054<br />
+                    ● 工作地点：西安
+                <br />
+                    &nbsp;&nbsp;负责服务地产或文化旅游、能源、快速消费品等行业的客户 
+                </p>
+                <p>● 职位编号 No.055<br />
+                    ● 工作地点：杭州
+                <br />
+                    &nbsp;&nbsp;负责服务通讯行业的客户（电信运营商、IT等）
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_12">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：创作类</div>
+                <h4>插画师（职位编号No.056～057） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 插画及预想图：根据创意需求，负责为平面、影视作品绘制插图及预想图；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：美术本科学历，2年以上同职位经验；<br />
+                    ● 核心能力：良好的绘画功底，插画风格多样，精通电脑绘图。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_13">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：媒介类</div>
+                <h4>媒介事业群总经理（职位编号No.058～059） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 业务开发：开发新客户及现有客户的媒体业务，完成团队的年度经营目标，对经营结果负责；<br />
+                    ● 策略规划：把握媒体传播趋势，制定媒介传播策略，指导撰写媒介策略报告，负责重要项目的提案；
+                <br />
+                    ● 团队管理：吸纳培养人才，提升团队专业水平及工作效率；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：广告学、新闻传播等专业本科及以上学历，8年以上媒介服务经验，曾服务于大型4A媒介代理广告公司；<br />
+                    ● 核心能力：经营管理能力，业务开发能力，媒介策划能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_14">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：媒介类</div>
+                <h4>媒介购买总监（职位编号No.060～061） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 媒介研究：整合媒体信息和动态，把握媒体最新发展动向，及时发掘与评估最新媒介机会；<br />
+                    ● 媒介计划：根据媒介策略，制定具策略性和优化的媒介投放策略及排期计划；
+                <br />
+                    ● 媒介谈判及购买：熟悉各类媒介资源，与各类媒体有良好的合作关系，根据媒介投放策略及排期计划进行谈判、购买媒体；<br />
+                    ● 团队管理：规范本部门操作流程，指导项目实施，培训指导团队人员以提升团队的工作品质及效率；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：广告学、新闻传播等专业本科及以上学历，6年以上媒介谈判和购买经验，与媒体保持良好的关系，曾服务于大型4A媒介代理广告公司；<br />
+                    ● 核心能力：责任心强，媒介谈判、投放策略制定的能力，开拓和整合各类媒体资源的能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_15">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：媒介类</div>
+                <h4>媒介资源开发总监（职位编号No.062） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 媒介研究：整合媒体信息和动态，及时把握媒体动向，分析媒体宣传规律和模式；<br />
+                    ● 媒体开发：密切关注行业动态，主动搜集最新的资讯，发现媒体机会；
+                <br />
+                    ● 媒体销售：分析媒体成本及合作成本，制定媒体代理销售的策略方案，其中包括价格及形式等；
+                <br />
+                    ● 项目管理：跟踪重点项目，保证公司核心媒介资源、核心媒介客户的稳定发展；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：广告学、新闻传播等相关专业本科及以上学历，6年以上同类岗位工作经验；<br />
+                    ● 核心能力：媒介开发、策划经验，良好的媒体资源关系。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_16">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：媒介类</div>
+                <h4>媒介策划经理（职位编号No.063～064） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 撰写策略： 根据传播推广方案进行目标市场分析，负责一般项目的媒介策略撰写，协助重大项目的媒介策略撰写；<br />
+                    ● 过程监管：督促及指导媒介策划主任工作，监控媒介策划工作的实施与完成；<br />
+                    ● 统筹协调：负责日常策划服务内容的安排，协调完成产品分析、媒体评估、事后监测与分析报告等工作，密切与媒介、事业群的联系；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：广告学、新闻传播、数学统计等专业本科及以上学历，4年以上媒介策划经验；<br />
+                    ● 核心能力：媒介整合策划经验，媒介策划撰写能力，沟通协调能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_17">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：数字营销类</div>
+                <h4>（数字营销）项目总监（职位编号No.065～066） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 客户开发及服务：制定年度经营目标，领导团队开发、服务客户及完成年度经营目标；<br />
+                    ● 策略拟定及项目管理：拟定数字营销策略及策划方案，统筹客户服务及项目经营管理  
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：互联网相关专业本科及以上学历，5年以上数字营销（网络整合传播、SNS、微博、互动）客户服务经验，有成功案例；<br />
+                    ● 专业能力：熟悉数字营销市场状况，专业的市场营销及经营知识，客户服务沟通技能，项目驾驭能力；<br />
+                    ● 核心能力：热爱数字营销市场的研究，擅长与人沟通交流，优秀的统筹能力及经营意识。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上（数字营销）项目总监职位的特殊要求 </h5>
+                <p>● 职位编号 No.065<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;掌握电信运营/IT类、汽车类、网络游戏类、快速消费品类（烟酒、日化、食品、化妆品）、旅游休闲类数字营销
+                </p>
+                <p>● 职位编号 No.066<br />
+                    ● 工作地点：西安
+                <br />
+                    &nbsp;&nbsp;掌握地产类、旅游休闲类数字营销
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_18">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：数字营销类</div>
+                <h4>（数字营销）客户经理 （职位编号No.067～068） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 客户开发及服务：开发新客户，保持与现有客户良好的关系及提供高水平的客户服务；<br />
+                    ● 策略拟定及执行：分析市场、目标客户及互联网用户行为，拟订数字营销策略及策划方案，统筹团队执行； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：互联网相关专业本科及以上学历，3年以上数字营销（网络整合传播、SNS、微博、互动）客户服务工作经验，有成功案例；<br />
+                    ● 专业能力：熟悉互联网文化，深刻洞察互联网用户，专业的营销传播知识、客户服务沟通技能；<br />
+                    ● 核心能力：热爱互联网知识的研究，擅长与人沟通交流，统筹能力。 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上（数字营销）客户经理职位的特殊要求 </h5>
+                <p>● 职位编号 No.067<br />
+                    ● 工作地点：广州<br />
+                </p>
+                <p>● 职位编号 No.068<br />
+                    ● 工作地点：西安<br />
+                    &nbsp;&nbsp;熟悉地产类、旅游休闲类数字营销
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_19">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：数字营销类</div>
+                <h4>（数字营销）策划经理（职位编号No.069） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 策略拟定：对市场、目标客户及互联网用户行为分析，拟定数字营销策略及策划方案；<br />
+                    ● 项目执行规划：针对项目策划方案制定完整的执行方案，撰写执行内容；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：互联网相关专业本科及以上学历，3年以上数字营销（网络整合传播、SNS、微博、互动）策划工作经验，有成功案例；<br />
+                    ● 专业能力：熟悉互联网文化，深刻洞察互联网用户，专业的营销传播知识、策划专业技能；<br />
+                    ● 核心能力：热爱互联网知识的研究，喜欢与人交流，对人性及社会现象有独到的洞察力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_20">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：数字营销类</div>
+                <h4>资深Flash设计师（职位编号No.070～071） 2名 </h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 动态表现：根据创意概念构建互动创意表现，完成动态效果的设计；<br />
+                    ● 互动程序：完成Flash互动程序设计，包括互动游戏、网站结构、视觉特效、前后台数据交互等内容；<br />
+                    ● Flash制作：与同事配合，完成Flash游戏、Flash动画、Flash广告、电子说明书的设计和制作；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：电脑设计及互联网相关专业本科及以上学历，2年以上企业Flash或城市、企业影视宣传片等多媒体设计工作经验；<br />
+                    ● 核心能力： 熟悉Flash设计，具备编写Flash经验，有动画节奏感和视觉冲击力，有成熟作品。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_21">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：设计类</div>
+                <h4>平面设计总监（职位编号No.072～073） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 项目运作：深刻理解并解决客户需求，负责重要项目的沟通与提案；<br />
+                    ● 设计规划：准确把握项目设计方向，界定设计风格定位、设计理念；<br />
+                    ● 管理统筹：充分调动团队人员的最大创意能力及创意效率，把控项目进程与设计方案交付质量；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：艺术类专业本科及以上学历，8年以上大型专业设计、广告媒体类公司平面设计，多个成功案例经验；<br />
+                    ● 核心能力：责任心强，商业设计能力，独立完成项目能力，客户沟通能力，团队领导能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_22">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：设计类</div>
+                <h4>高级平面设计师（职位编号No.074～075） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 资料搜集：进行项目前期调研和资料搜集，并作初步归纳梳理；<br />
+                    ● 设计执行：协助上级主管，按时优质完成项目设计方案，并做好各项提案准备；<br />
+                    ● 跟进反馈：根据客户反馈的意见，对设计方案进行修改和调整； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：艺术类专业专科以上学历，4年以上专业设计、广告媒体类公司平面设计经验；<br />
+                    ● 核心能力：熟练操作Photoshop、Illustrator等各类软件，扎实的Logo、VI、画册、版式等设计功底，能很好地理解和执行设计要求，可适应多任务处理的工作压力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_23">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：设计类</div>
+                <h4>商业空间设计师（职位编号No.076～077） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 设计构思：以品牌策略为导向，用原创设计思维完成SI及相关商业空间设计项目；<br />
+                    ● 设计制作：注重设计方案与施工制作的紧密联系，能够满足客户多层面的设计需求；<br />
+                    ● 合作执行：对于大型空间设计工作，以团队作业的方式相互配合确保如期完成；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：商业空间、视觉设计专业本科及以上学历，4年以上同等职位经验，熟悉电子产品类、卫浴类、服装鞋类等行业；<br />
+                    ● 核心能力：对商业空间设计充满激情，熟练使用3Dmax设计软件及CAD绘图软件，具原创设计能力，能够独立完成SI及相关设计个案，有团队合作精神，认真负责，有更高的专业品质追求。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_24">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：集团研发及培训中心</div>
+                <h4>研发培训总经理（职位编号No.078） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 策略指导：参与指导重要品牌战略规划项目工作、指导品牌战略、品牌管理模式设计；<br />
+                    ● 专业研究：收集整理公司专业资源，指导团队开展专题研究项目、开发专业工具等；<br />
+                    ● 培训指导：系统开发与品牌战略规划管理以及品牌整合传播推广作业相关的培训课程，建立适应公司发展的培训体系，组织实施人才培训计划；<br />
+                    ● 理论实践：掌握相关行业热点与动态，分析品牌建设新理论、新实践，撰写理论及案例报告，开展对外交流与培训；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：本科及以上学历，15年以上工作经验；<br />
+                    ● 核心能力：策略能力，研究能力，沟通能力，经营管理能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_25">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：集团研发及培训中心</div>
+                <h4>高级品牌顾问（职位编号No.079） 1名 </h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 策略指导：参与重大品牌策略项目的研究与指导；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 经验：15年以上品牌策划经验，接受兼职；<br />
+                    ● 核心能力：策略能力、研究能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_26">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：集团研发及培训中心</div>
+                <h4>策略开发总监（职位编号No.080） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 项目研究：对行业、品牌、市场等进行研究，根据分析研究结果提供品牌市场趋势、热点解析及策略建议；<br />
+                    ● 策略服务：积极与同行业交流沟通，获取有效信息，为公司客户提供项目前期策略研究服务；
+                <br />
+                    ● 信息分析：完成品牌策划规划前期的数据统计与分析，给出清晰的分析结论与启示； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：本科及以上学历，6年以上同类职位经验，有咨询公司工作背景，MBA、EMBA优先；<br />
+                    ● 核心能力：策略性思维能力，品牌策略管理能力，研究分析能力，专业指导能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_27">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：集团研发及培训中心</div>
+                <h4>高级创意顾问（职位编号No.081～082） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 创意指导：参与重大创意项目的创意及制作指导；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 经验：15年以上相关工作经验，曾服务于大型4A广告公司，多次获得国内外重要奖项，接受兼职；<br />
+                    ● 核心能力：创意能力，研究能力，专业指导能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_28">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：集团研发及培训中心</div>
+                <h4>市场研究员（职位编号No.083） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 把握市场：搭建市场研究平台，针对重点行业开展市场研究工作；<br />
+                    ● 信息提报：定期进行各行业营销传播信息收集、归纳与分析，即时向相关团队提供可靠、有助传播发展的信息；<br />
+                    ● 趋势研判：收集全球市场资讯，跟踪有一定影响力的市场变化，发布趋势研究报告； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：传播学、市场营销、广告学、汉语言文学专业本科及以上学历，8年以上工作经验；<br />
+                    ● 核心能力：责任心强，市场洞察能力，逻辑思维能力，中英文阅读能力，报告撰写能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_29">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：管理服务类</div>
+                <h4>董事会秘书（职位编号No.084） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 会议规划：筹备董事会会议和股东大会，提交大会报告和文件，出席董事会会议并作记录；<br />
+                    ● 关系管理：和政府相关部门及投资者保持良好的关系；<br />
+                    ● 融资管理：建立融资管理规范体系、渠道，负责融资管理的计划、组织与实施；<br />
+                    ● 法规解析：协助了解与行业相关的法律法规，确保公司的运营机制和规章制度符合国家的相关法律法规；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：金融、财务、法律专业本科及以上学历，4年以上同等职位经验；<br />
+                    ● 核心能力：扎实的金融、财务及法律知识，熟悉董事会流程、股份公司治理结构、投资者关系、公司法、证券法及公司上市的相关规定；<br />
+                    ● 综合要求：为人正直笃实，工作严谨条理，具大局观，卓越的判断能力、统筹能力及沟通能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_30">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：管理服务类</div>
+                <h4>集团财务总监（职位编号No.085） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 规划及管理：参与集团公司经营、全面负责集团公司财务预算的规划制定与监督管理；<br />
+                    ● 体系建立：全面负责集团公司的财务管理与投融资规划，建立高标准的财务核算、预结算及风险管控体系，形成严谨的财务内控体系；<br />
+                    ● 分析及建议：提供准确的财务数据，进行财务跟踪分析，为经营管理、业务发展提供可靠的财务指标分析及建议；<br />
+                    ● 投资运营：疏通融资渠道，对公司投资、融资等经营活动提供准确数据及决策依据，参与风险评估、指导、跟踪和控制；<br />
+                    ● 团队管理：规范财务部门操作流程，培训指导财务团队人员以提升财务团队的工作品质及效率； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：财务管理专业本科及以上学历，10年以上大型集团公司或会计事务所经验，CPA、ACCA资格者优先；<br />
+                    ● 核心能力：IPO项目运营经验，精通上市规则及国家财税法律规范，卓越的财务项目运营及管理能力；<br />
+                    ● 综合素质：优秀的职业素养，极强的战略管理能力，敏锐的财务洞察、分析、鉴别及内部审计能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_31">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：管理服务类</div>
+                <h4>财务经理（职位编号No.086～087） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 规划及执行：参与税务、财务预算、核算、费用控制等内控体系的规划、执行情况监督及调整管理；<br />
+                    ● 管理报表：根据年度经营及预算规划，审核与财务相关的合同，及时准确地向管理层及部门负责人提交月、季、年度财务分析及建议报表；<br />
+                    ● 团队管理：规范财务部门操作流程，培训指导团队人员以提升财务团队的工作品质及效率；<br />
+                    ● 对外关系：接待税务稽查，与政府财政、税务部门及银行、会计师事务所保持良好合作关系；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：财税、财务、审计专业本科及以上学历，5年以上同等职位经验；<br />
+                    ● 核心能力：精通成本、审计、税务、财务管理、法律等政策及财务经营分析、风险规避；<br />
+                    ● 素质要求：责任心强，逻辑思维清晰，诚信、忠诚、谨慎，沟通能力好。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_32">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：管理服务类</div>
+                <h4>信息经理（职位编号No.088） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● IT治理及服务：建立符合公司业务发展的IT治理架构，引导各部门进行信息化匹配、风险评估，信息安全管理及IT服务管理；<br />
+                    ● 网站建设及优化：负责官方网站的建设管理、办公网络及（OA、金蝶）等管理软件建立、更新和优化升级；<br />
+                    ● 信息共享与安全：信息渠道的架设、管理及信息源的采集、审核，建立内部知识信息的共享平台，控制信息安全风险；<br />
+                    ● 组织培训：组织不同层次的员工对于企业网络、办公自动化软件等信息化培训和操作指导；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：信息管理、计算机专业本科及以上学历， 5年以上同等职位经验；<br />
+                    ● 核心能力：IT行业综合技术知识，，懂C+、JAVA语言，熟悉金蝶、OA等系统的项目实施管理；<br />
+                    ● 综合素质：精通现代化企业信息管理技术的平台及应用，具备较强的信息管理思维，良好的解决问题能力。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_33">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：管理服务类</div>
+                <h4>数码影视后期制作中心运营总监（职位编号No. 089～090） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 业务经营：开发新客户，负责项目沟通、谈判与报价，工作完成确认及督促收款；<br />
+                    ● 团队管理：整合内外资源，统筹项目实施，提升团队工作效率；  
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 经验：10年以上相关工作经验；<br />
+                    ● 核心能力：经营管理能力，客户开发与服务能力，组织协调能力强，高度的责任心。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_34">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：第八届新太阳计划（2013～2014年应届毕业生）</div>
+                <h4>助理策划（职位编号No.091～092） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 策略撰写：协助项目策略的企划方案撰写及跟踪调整；<br />
+                    ● 市场调研：收集、整理、分析所服务客户的市场和消费者信息，撰写相关分析报告；
+                <br />
+                    ● 信息管理：建立所服务客户项目的相关档案库以便于保管、使用；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：重点院校，营销、广告、新闻传播、文学专业2013、2014届硕士以上研究生；<br />
+                    ● 核心能力：较强的策划意识、责任心、执行能力，善于沟通，信息整合能力出色。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上助理策划职位的特殊要求</h5>
+                <p>● 职位编号 No.091<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责地产品牌策划的执行、跟进 
+                </p>
+                <p>● 职位编号 No.092<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;负责政府规划、城市策划项目的执行、跟进
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_35">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：第八届新太阳计划（2013～2014年应届毕业生）</div>
+                <h4>助理文案（职位编号No.093～094） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 创意构思：配合资深文案，与美术指导共同拟定创意文案的构思；<br />
+                    ● 文案创意：配合资深文案，用文字表现创意意念，完成标题、内文、TVC脚本、广播稿等文案撰写；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：重点院校，中文类、广告、新闻传播专业2013、2014届研究生；<br />
+                    ● 核心潜力：热爱传播行业，酷爱创意，思维活跃，善于学习，文字信息整合能力强。
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_36">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：第八届新太阳计划（2013～2014年应届毕业生）</div>
+                <h4>助理设计师（职位编号No.095～096） 2名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 创意构思：配合美术指导，与文案共同拟定创意构思；<br />
+                    ● 创意表现：通过画面表现创意意念，协助完成平面稿、TVC脚本、字幕、摄影、插画、完稿等美术元素设计及编排；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：重点院校，广告、美术设计专业2013、2014届全日制本科生；<br />
+                    ● 核心潜力：美术功底好，酷爱创意，思维活跃，善于学习。 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上助理设计师职位的特殊要求</h5>
+                <p>● 职位编号 No.095<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;参与通讯行业的客户（电信运营商、IT等）等的美术创意
+                </p>
+                <p>● 职位编号 No.096<br />
+                    ● 工作地点：西安<br />
+                    &nbsp;&nbsp;参与地产或文化旅游、能源、快消品等行业的客户的美术创意
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_37">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：第八届新太阳计划（2013～2014年应届毕业生）</div>
+                <h4>助理客户主任 （职位编号No.097～099） 3名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 过程跟进：协助客户主任与客户日常联络及相关工作的推进及反馈；<br />
+                    ● 会务事宜：负责客户会务接待，撰写会议纪要；<br />
+                    ● 信息收集分析：搜集市场、消费者和竞争对手的信息并且进行初步分析；
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：重点院校，传播、市场营销专业2013、2014届全日制本科生；<br />
+                    ● 核心潜力：热爱传播行业，富有激情，较强的责任心、执行能力，思维活跃，性格阳光。
+                </p>
+                <hr />
+                <h5><strong>★</strong> 以上助理客户主任职位的特殊要求</h5>
+                <p>● 职位编号 No.097<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;参与汽车与汽车配件行业的客户（乘用车、商用车、汽车零部件等）的企业的跟进、管理 
+                </p>
+                <p>● 职位编号 No.098<br />
+                    ● 工作地点：广州<br />
+                    &nbsp;&nbsp;参与快速消费品（烟酒、日化、食品、化妆品等）等行业的客户的跟进、管理 
+                </p>
+                <p>● 职位编号 No.099<br />
+                    ● 工作地点：西安<br />
+                    &nbsp;&nbsp;参与地产或文化旅游、能源、快消品等行业的客户的跟进、管理
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+        <div id="divJobDetail_38">
+            <div class="detailInfo divJobDetail">
+                <div class="detailInfo_t divJobDetail_t">职位类别：第八届新太阳计划（2013～2014年应届毕业生）</div>
+                <h4>助理创意研究员（职位编号No.100） 1名</h4>
+                <hr />
+                <h5><strong>★</strong> 工作地点：广州</h5>
+                <h5><strong>★</strong> 工作职责</h5>
+                <p>● 信息收集：收集创意资讯；
+                <br />
+                    ● 信息管理：根据立项，对创意类作品进行分类、分析与归档；
+                <br />
+                    ● 其他工作：协助上级完成其他研究工作； 
+                </p>
+                <hr />
+                <h5><strong>★</strong> 任职要求</h5>
+                <p>● 学历&经验：重点院校，市场营销、广告、新闻传播专业2013、2014届硕士生；
+                <br />
+                    ● 核心能力：扎实的传播、营销知识，信息搜集、整理能力强，文字功底好，耐心细致。 
+                <br />
+                    &nbsp;&nbsp;（温馨提示：应届毕业生若能胜任初投职位之外的助理职位，经统一招聘实习试用，可结合个人优势与意愿予以调岗。）
+                </p>
+            </div>
+            <div class="detailInfo divJobDetail_contact">
+                <p>● 本次招聘有效期：2013.3.28～2013.9.30 </p>
+                <p>● 请将简历（策划、创作、设计类职位须带作品）以附件形式发送至hr@adnewsun.com，<br />
+                    主题统一为：应聘职位编号＋姓名
+                    <br />
+                    如需咨询，可在办公时间拨打020-62606088转121，电联招聘专员：Jane， 她会给你尽可能详细的答复。 </p>
+                <p>● 联系地址：广州市天河区珠江新城临江大道3号 发展中心20楼<br />
+                    （仅限接待进入面试环节、如约到访的应聘者，谢谢！）</p>
+                <p>● 旭日因赛（因赛集团）官方网站：<a href="http://www.adnewsun.com" target="_blank">http://www.adnewsun.com</a></p>
+            </div>
+        </div>
+
+    </div>
+    <div class="hide">
+        <!-- 这里加统计 -->
+
+        <script type="text/javascript">
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F67a18a6562569d5956ecc5594e815a89' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+
+    </div>
+</body>
+</html>

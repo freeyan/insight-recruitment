@@ -1,0 +1,64 @@
+﻿* { margin: 0; padding: 0; -webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start: 0; -webkit-margin-end: 0; outline: none; border: none; }
+body { width: 100%; background-color: #fff; font-family: "微软雅黑", "宋体", Verdana, Arial; font-size: 12px; }
+li { list-style: none; }
+a { outline: none; border: 0; text-decoration: none; }
+	a img { border: 0; }
+
+.hide { display: none; }
+
+#divFilter { filter: Alpha(opacity=85); -moz-opacity: 0.85; opacity: 0.85; height: 1996px; width: 100%; position: absolute; left: 0pt; top: 0pt; z-index: 100; background-color: #000; display: none; }
+#divFilter_openwindow { position: absolute; z-index: 200; display: none; width: 980px; height: 691px; background: url(../image/window.png) no-repeat; _background: url(../image/window.jpg) no-repeat; }
+#divFilter_openwindow_aClose { position: absolute; right: 0; top: 0; display: block; width: 34px; height: 34px; }
+#divFilter_openwindow_content { position: absolute; left: 25px; top: 32px; width: 922px; height: 633px; overflow-y: scroll; overflow-x: hidden; }
+
+#divBody { width: 100%; }
+
+#divHeader { width: 100%; height: 133px; color: #fff;background-color:#ca000e; }
+#divFoot { width: 100%; text-align: center; background-color: #4d0000; height: 60px; line-height: 60px; color: #a68080; }
+
+#divHeader_slogan, #divHeader_menu, #divMain { width: 1024px; margin: auto; overflow: hidden; }
+
+
+#divHeader_slogan { height: 133px; font-size: 18px; line-height: 133px; position: relative; }
+	#divHeader_slogan label { color: #fff; font-size: 26px; line-height: 118px; }
+#divHeader_slogan_other { display: block; width: 77px; height: 14px; position: absolute; right: 0; top: 100px; background-image: url(../image/maidixunbang.jpg); }
+
+#divHeader_menu { height: 60px; line-height: 60px; }
+	#divHeader_menu a { color: #fff; display: block; width: 338px; height: 60px; line-height: 60px; text-align: center; font-size: 14px; }
+		#divHeader_menu a:hover { background: url(../image/menuhover.png) no-repeat; }
+	#divHeader_menu ul { display: block; width: 1024px; height: 60px; }
+	#divHeader_menu li { display: block; float: left; width: 2px; height: 60px; }
+		#divHeader_menu li img { display: block; width: 2px; height: 60px; }
+	#divHeader_menu .lia { width: 338px; }
+	#divHeader_menu .lia3 { width: 340px; }
+		#divHeader_menu .lia3 a { width: 340px; }
+
+
+#divMain { height: 1721px; margin-top: 34px; }
+
+
+#divMain_l, #divMain_r { float: left; }
+#divMain_l { width: 725px; padding-right: 11px; height: 1670px; }
+#divMain_r { width: 282px; height: 1664px; border: 3px solid #d7000f; }
+
+#divMain_l_kv1 { width: 725px; height: 314px; cursor: pointer; }
+#divMain_l_kv2 { width: 725px; height: 131px; margin: 11px 0; }
+#divMain_l_onload { width: 725px; height: 1203px; }
+#divMain_l_onload_t { width: 725px; height: 34px; line-height: 34px; background: url(../image/ontheroadtitle.jpg) no-repeat; color: #fff; font-size: 18px; text-indent: 44px; }
+#divMain_l_onload_c { width: 724px; height: 1168px; border-top: 1px solid #e3e3e3; border-left: 1px solid #e3e3e3; }
+	#divMain_l_onload_c li { position: relative; display: block; float: left; width: 362px; height: 146px; background: url(../image/peoplebg.jpg) no-repeat; }
+		#divMain_l_onload_c li img { position: absolute; display: block; width: 106px; height: 106px; top: 22px; left: 19px; }
+		#divMain_l_onload_c li h3 { position: absolute; display: block; width: 200px; height: 24px; line-height: 24px; top: 22px; left: 142px; font-size: 20px; font-weight: bold; color: #000; overflow: hidden; cursor:pointer;}
+		#divMain_l_onload_c li h4 { position: absolute; display: block; width: 200px; height: 14px; line-height: 14px; top: 52px; left: 142px; font-size: 12px; font-weight: normal; color: #000; overflow: hidden; }
+		#divMain_l_onload_c li label { position: absolute; display: block; width: 200px; height: 14px; line-height: 14px; top: 72px; left: 142px; font-size: 12px; font-weight: normal; color: #999; overflow: hidden; }
+		#divMain_l_onload_c li span { position: absolute; display: block; width: 200px; height: 36px; line-height: 18px; top: 93px; left: 142px; font-size: 12px; font-weight: normal; color: #666; overflow: hidden; }
+			#divMain_l_onload_c li span a { color: #ff0000; font-weight: normal; font-size: 12px; }
+	#divMain_l_onload_c #liBlank { background: url(../image/blank.jpg) no-repeat; }
+
+#divMain_r { position: relative; }
+	#divMain_r #divMain_r_t { width: 282px; height: 126px; background: url(../image/zhaopin.png) no-repeat; }
+	#divMain_r #divMain_r_b { position: absolute; bottom: 0; width: 282px; height: 24px; background: url(../image/zhaopinqixian.jpg) no-repeat; }
+	#divMain_r h3 { width: 266px; height: 26px; line-height: 26px; margin: 9px auto; background: url(../image/zhaopintitle.png) no-repeat; text-indent: 11px; color: #fff; font-size: 12px; font-weight: normal; }
+	#divMain_r ul { width: 266px; margin: 0 auto; padding: 1px 0 13px 0; }
+	#divMain_r li { width: 266px; height: 26px; line-height: 26px; overflow: hidden; text-indent: 18px; background: url(../image/zhaopindot.png) no-repeat 9px 11px; }
+		#divMain_r li a { color: #333; }
